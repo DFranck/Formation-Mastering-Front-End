@@ -1,0 +1,41 @@
+body {
+  overflow: hidden;
+  /* (empeche le scroll) */
+  min-height: 100vh;
+  /* defini la taille de la balise body */
+  cursor: crosshair;
+}
+
+.bubble {
+  position: absolute;
+  /* besoin des valeur top et left pour positionner la balise avec la class bubble */
+  border-radius: 300px;
+  /* donne a la class bubble la forme ronde */
+  background: rgba(255, 166, 0, 0.6);
+  /* couleur de bubble */
+  opacity: 0;
+  /* défini l'opacité à la création/chargement */
+  animation: anim 8s forwards;
+  /* lié avec @keyframes "anim" permet de créer une animation de la balise qui passe de l'état de .bubble à l'état de @keyframes anim en 8s et ne disparait pas grace à "forwards*/
+  filter: hue-rotate(0deg);
+}
+
+h3{
+  font-size: 10rem;
+  text-align: center;
+  margin-top: 20px;
+  color: rgba(128, 128, 128, .555);
+
+}
+
+@keyframes anim {
+  to {
+    top: -250px;
+    left: var(--left);
+    /*  */
+    opacity: 1;
+    filter: hue-rotate(720deg);
+    /* dégradé de couleur pendant l'animation fait 2 fois le tour du cercle chhromatique */
+  }
+}
+/* Lié avec animation: anim 8s; */

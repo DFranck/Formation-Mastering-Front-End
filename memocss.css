@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap');
+
+
+body {
+    font-family: 'Rubik Pixels', cursive;
+    background: url(logo-ddd.svg) center/cover;
+    min-height: 100vh;
+}
+
+h1{
+    color: red;
+    text-transform: uppercase;
+    letter-spacing: 1vw;
+    text-align: center;
+    font-size: 5 vw ;
+    text-shadow: 6px 4px 8px #7161d1a3;
+}
+
+/* boite tuto */
+
+main {
+    min-height: 500px;
+    width: 90%;
+    margin: 0 auto;
+    background: rgba(177, 126, 126, 0.322);
+    border: 4px solid darkblue;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 14px black;
+    padding: 15px;
+}
+
+.flexbox,
+.grid,
+.absolute{
+    border: 2px solid skyblue;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    min-height: 150px;
+}
+
+.flexbox ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.flexbox li {
+   list-style: none;
+   height: 160px;
+   width: 160px;
+   margin: 10px;
+   background: blue;
+   /* centrer un unique element verti et hori */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+h2 {
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.grid img {
+    width: 100%;
+    display: block;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "i1 i2"
+    "ta ta"
+    "vi bt";
+}
+
+input, textarea {
+    margin: 5px;
+    border: 1px solid darkblue;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.1rem;
+    font-family: 'Rubik Pixels', cursive;
+}
+
+textarea {
+    grid-area: ta;
+    height: 40px;
+    resize: none;
+}
+
+#btn-submit {
+    grid-area: bt;
+    cursor: pointer;
+    background: skyblue;
+    transition: 0.2s;
+}
+
+#btn-submit:hover {
+    background: darkblue;
+    color: white;
+}
+
+/* .absolute, parent relatif pour enfant absolute 
+sinon absolute par rapport au body*/ 
+
+.absolute {
+    position: relative;
+}
+
+#circle1 {
+    height: 100px;
+    width: 100px;
+    background: skyblue;
+    position: absolute;
+    border-radius: 20px;
+    top: 0;
+    right: 0;
+}
+
+/* centrage d'un element absolute */
+
+#circle2 {
+    height: 40px;
+    width: 40px;
+    background: pink;
+    position: absolute;
+    border-radius: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 900px){
+
+.grid-container {
+    display: block;
+}
+
+.grid-container img {
+    width: 40%;
+}
+
+}
+
+@media screen and (max-width: 610px){
+
+    form{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "i1"
+        "i2"
+        "ta"
+        "bt";
+    }
+
+    .flexbox ul{
+        flex-wrap: wrap;
+    }
+
+    input, 
+    textarea{
+        font-size: 0.8rem;
+    }
+}
+
