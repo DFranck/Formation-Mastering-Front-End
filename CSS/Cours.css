@@ -1,5 +1,5 @@
 :root {
-  --color1: #dc2020;
+  --color1: #e35151;
   --color2: #c07ac0;
   --color3: #000;
   --color4: #f8f8f8;
@@ -17,7 +17,8 @@ body {
   background: url(./2022-12-31.png) center/cover;
   height: 100vh;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--color1);
+  color: var(--color2);
+  overflow: hidden;
 }
 
 .card {
@@ -38,8 +39,26 @@ body {
 
 h1 {
   margin-bottom: 24px;
+  position: relative;
 }
 
+h1::after{
+  content: "";
+  position: absolute;
+  background: var(--color2);
+  height: 1px;
+  width: 100%;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  animation: h1anim 1s ease-in-out forwards;
+  transform-origin: center;
+}
+@keyframes h1anim{
+  100% {
+    transform: translateX(-50%) scaleX(1);
+  }
+}
 .gridContainer {
   display: grid;
   grid-template-columns: 20% 80%;
@@ -72,7 +91,7 @@ p {
   margin: 20px 0;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 2;
   overflow: hidden;
   text-align: justify;
 }
@@ -85,12 +104,15 @@ p::selection {
 .checkboxContainer {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 20px;
+  perspective: 10px;
 }
 
 input[type="checkbox"] {
-  
+  visibility: hidden;
 }
-input[type="checkbox"]:checked + label:active {
+
+input[type="checkbox"]:checked + label {
   background: green;
   transform: scale(1.5);
 }
@@ -102,4 +124,171 @@ label {
   padding: 10px;
   border-radius: 5px;
   transition: 0.5s;
+  user-select: none;
+  display:inline-block;
+  margin: auto;
+}
+
+label:first-of-type:hover{
+  animation: label1 1s infinite linear;
+}
+
+@keyframes label1{
+  50%{
+    transform: scale(1.4);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+label:nth-child(4):hover{
+animation: label2 10s infinite linear;
+}
+
+@keyframes label2{
+  33%{
+    transform: translateZ(10px);
+  }
+  66%{
+    transform: translateZ(-40px);
+  }
+  100%{
+    transform: translateZ(0);
+  }
+}
+
+.email{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.email input{
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  /* border: none; */
+  border: 3px solid transparent;
+  transition: 0.5s;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--color2);
+  max-width: 300px;
+  width: 30%;
+  min-width: 150px;
+}
+
+input[type="text"]:focus{
+background: transparent;
+border: 3px solid var(--color2);
+border-radius: 150px;
+}
+
+input[type="text"]::placeholder{
+  color: var(--color1);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button{
+  cursor: pointer;
+  background: var(--color2);
+  border: none;
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  border-radius: 150px;
+  margin: 0 auto;
+  display: block;
+  transition: 0.3s;
+}
+
+button:hover{
+  letter-spacing: 5px;
+}
+
+button:active{
+  transform: scale(1.2);
+}
+
+button:hover + a,
+a:hover{
+  opacity: 1;
+  transform: translateY(0);
+}
+a{
+  color: var(--color2);
+  text-align: center;
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.5s;
+}
+
+a:visited{
+  color: var(--color1);
+}
+
+.feuille{
+  height: 40px;
+  position: absolute;
+  filter: drop-shadow(5px 5px 4px #4444dd);
+  z-index: -10;
+  animation: feuille 25s infinite linear;
+}
+
+@keyframes feuille{
+  0%{
+    top: 2%;
+    left: 2%;
+    transform: rotate(30deg);
+  }
+  10%{
+    top: 5%;
+    left: 5%;
+    transform: rotate(50deg);
+  }
+  20%{
+    top: 10%;
+    left: 10%;
+    transform: rotate(90deg);
+  }
+  30%{
+    top: 50%;
+    left: 50%;
+    transform: rotate(150deg);
+  }
+  40%{
+    top: 20%;
+    left: 150%;
+    transform: rotate(180deg);
+  }
+  50%{
+    top: 100%;
+    left: 60%;
+    transform: rotate(250deg);
+  }
+  60%{
+    top: 50%;
+    left: 80%;
+    transform: rotate(350deg);
+  }
+  70%{
+    top: 80%;
+    left: 10%;
+    transform: rotate(400deg);
+  }
+  80%{
+    top: 40%;
+    left: 30%;
+    transform: rotate(450deg);
+  }
+  90%{
+    top: 70%;
+    left: 90%;
+    transform: rotate(720deg);
+  }
+  100%{
+    top: 90%;
+    left: 20%;
+    transform: rotate(0deg);
+  }
 }
