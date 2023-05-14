@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Saira+Condensed:wght@500&display=swap");
+
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 5px;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+p {
+  font-size: 0.8rem;
+}
+body {
+  min-height: 100vh;
+  background: rgb(29, 29, 29);
+  color: rgb(250, 250, 250);
+}
+nav {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 10px 20px;
+}
+nav ul {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+.header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 30px auto;
+}
+h1 {
+  font-size: 5rem;
+}
+.header-left-container h3 {
+  color: #474dff;
+  font-size: 1.8rem;
+}
+.header-right {
+  width: 50%;
+}
+#modem {
+  width: 100%;
+  margin: 0 auto;
+}
+.infos {
+  display: grid;
+  grid-template-columns: 33% 67%;
+  background: rgb(10, 10, 10);
+  border-radius: 10px;
+}
+.btn-container {
+}
+button {
+  border: none;
+  background: #474dff;
+  color: white;
+  width: 150px;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 5px;
+}
+.investors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 86%;
+}
+.img-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.img-container img {
+  height: 60px;
+}
