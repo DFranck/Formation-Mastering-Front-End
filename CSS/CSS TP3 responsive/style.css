@@ -30,6 +30,7 @@ nav ul {
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 30px auto;
+  align-items: center;
 }
 h1 {
   font-size: 5rem;
@@ -51,8 +52,7 @@ h1 {
   background: rgb(10, 10, 10);
   border-radius: 10px;
 }
-.btn-container {
-}
+
 button {
   border: none;
   background: #474dff;
@@ -77,4 +77,46 @@ button {
 }
 .img-container img {
   height: 60px;
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-left-container h3{
+    font-size: 1rem;
+  }
+
+  p{
+    font-size: 0.7rem;
+  }
+  /* body{
+  background: red;
+} */
+}
+
+@media screen and (max-width: 592px) {
+  /* body{
+    background: red;
+  } */
+
+  nav{
+    grid-template-columns: 35% 65%;
+  }
+  nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .header {
+    display: block;
+    margin: auto;
+  }
+  .infos {
+    display: block;
+    text-align: center;
+  }
+  .img-container img {
+    height: 50px;
+  }
 }
