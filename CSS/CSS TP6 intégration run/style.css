@@ -1,0 +1,266 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+/* ******************************All*********************************** */
+body {
+  background: whitesmoke;
+}
+
+button,
+input[type="submit"] {
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: 1px solid gray;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+button:hover,
+input[type="submit"]:hover {
+  background: rgb(33, 33, 33);
+  color: whitesmoke;
+}
+
+h1,
+h2 {
+  font-weight: 400;
+}
+
+p {
+  font-size: 0.8rem;
+  font-weight: 200;
+  line-height: 30px;
+  margin: 20px 0;
+}
+
+/* ***************************Target********************************* */
+
+header {
+  display: flex;
+  position: relative;
+}
+
+.headerLeft {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 3vw;
+}
+
+.headerRight {
+  width: 50%;
+  height: 50vw;
+  background: url(./assets/img/banner.jpg) center/cover;
+}
+header::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: rgba(180, 180, 180, 0.518);
+  bottom: 0;
+}
+/* **********************************Sections************************************ */
+.firstSection {
+    
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 25vw;
+  position: relative;
+}
+.firstSection::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: rgba(180, 180, 180, 0.518);
+  bottom: 0;
+}
+.firstLeft {
+  height: 25vw;
+  background: url(./assets/img/img-left.jpg) center/cover;
+}
+
+.firstRight {
+  height: 25vw;
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.secondSection {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  height: 25vw;
+  position: relative;
+}
+.secondSection::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: rgba(180, 180, 180, 0.518);
+  bottom: 0;
+}
+.secondRight {
+  height: 25vw;
+  background: url(./assets/img/img-right.jpg) center/cover;
+}
+
+.secondLeft {
+  height: 25vw;
+  padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+/* ****************************Formulaire******************************** */
+.form {
+  max-width: 70%;
+  margin: 5vw auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+    margin-top: 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+label {
+  cursor: pointer;
+}
+.input {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "ln le"
+    "in ie";
+  margin: 0 0 20px;
+}
+input {
+  font-size: 0.8rem;
+}
+.ln {
+  grid-area: ln;
+}
+.in {
+  grid-area: in;
+}
+.le {
+  grid-area: le;
+}
+.ie {
+  grid-area: ie;
+}
+
+textarea {
+  resize: none;
+  font-size: 0.8rem;
+}
+
+/* ********************************Footer*********************************** */
+
+footer {
+  margin-top: 10vw;
+  position: relative;
+}
+
+footer::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 80%;
+  background: rgba(180, 180, 180, 0.518);
+  top: -5vw;
+  left: 10%;
+}
+.socialLogo {
+  height: 10vw;
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.socialLogo button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  width: 5vw;
+  height: 5vw;
+  padding: 10px 10px 10px 10px;
+}
+
+/* *****************************MediaQuery********************************** */
+
+@media screen and (max-width: 900px) {
+  h1,
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 0.6rem;
+    line-height: 20px;
+    margin: 15px 0;
+  }
+
+  button,
+input[type="submit"] {
+  padding: 8px 15px;
+  font-size: 0.6rem;
+}
+}
+
+@media screen and (max-width: 650px) {
+ 
+    header {
+        display: block;
+      }
+      
+.headerLeft {
+    width: 100%;
+  }
+
+  .headerRight{
+    width: 100%;
+  }
+.firstSection{
+    height: fit-content;
+}
+  .firstLeft {
+    display: none;
+  }
+  .firstRight {
+    width: 100vw;
+    height: fit-content;
+    display: block;
+  }
+.secondSection{
+    height: fit-content;
+}
+  .secondRight {
+    display: none;
+  }
+  .secondLeft {
+    width: 100vw;
+    height: fit-content;
+    display: block;
+  }
+}
