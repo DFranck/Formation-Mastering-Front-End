@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+@font-face {
+  font-family: "font1";
+  src: url(../Fonts/inter/static/Inter-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "font2";
+  src: url(../Fonts/Merriweather/Merriweather-Light.ttf);
+}
+h1, li, h2, h3, label, button, input[type=submit] {
+  font-family: "font1";
+  text-transform: uppercase;
+}
+
+p, h4 {
+  font-weight: 100;
+  font-family: "font2";
+  font-size: 0.8rem;
+}
+
+li, label, input {
+  cursor: pointer;
+}
+
+button {
+  padding: 1rem 4rem;
+  cursor: pointer;
+}
+
+body {
+  background: url(../img/bg.jpg) fixed center/cover;
+  height: 100vh;
+}
+
+header {
+  height: 100vh;
+  color: whitesmoke;
+  width: 80%;
+  margin: 0 auto;
+}
+header h1 {
+  font-size: 5rem;
+  text-align: center;
+  width: 60%;
+}
+header .headerIntro {
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+}
+header .headerIntro i {
+  border: 1px solid whitesmoke;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+}
+header nav {
+  background: rgba(245, 245, 245, 0.215);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  font-size: 0.9rem;
+}
+header nav ul {
+  gap: 3vw;
+  padding: 0 2vw;
+  display: flex;
+}
+header nav .navLeft ul :hover {
+  background: rgba(245, 245, 245, 0.769);
+  color: black;
+}
+header nav .navRight ul :hover {
+  scale: 1.2;
+}
+
+section {
+  background: whitesmoke;
+  width: 80%;
+  margin: 0 auto;
+  padding: 5%;
+}
+section Img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.section1 h2 {
+  font-size: 3.5rem;
+  width: 60%;
+  margin-bottom: 2rem;
+}
+.section1 p {
+  width: 60%;
+  margin-bottom: 2rem;
+  font-style: italic;
+  line-height: 3rem;
+}
+.section1 h4 {
+  margin-bottom: 3rem;
+}
+.section1 h4 ::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 30%;
+  background: red;
+  top: 0;
+  left: 0;
+}
+
+footer {
+  padding: 5% 10%;
+}
+footer div {
+  background: whitesmoke;
+}/*# sourceMappingURL=index.css.map */

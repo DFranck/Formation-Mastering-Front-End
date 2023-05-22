@@ -1,0 +1,54 @@
+header{
+    height: 100vh;
+    color: whitesmoke;
+    width: 80%;
+    margin: 0 auto;
+    h1{
+        font-size: 5rem;
+        text-align: center;
+        width: 60%;
+    }
+    .headerIntro{
+        height: 92vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5vh;
+    }
+    .headerIntro i{
+        border: 1px solid whitesmoke;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 30px;
+    }
+    
+    nav{
+        background: rgba(245, 245, 245, 0.215);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 8vh;
+        font-size: .9rem;
+        ul{
+            gap: 3vw;
+            padding: 0 2vw;
+            display: flex;  
+        }
+        .navLeft ul{
+            :hover{
+                background: rgba(245, 245, 245, 0.769);
+                color: black;
+            }
+        }
+        .navRight ul{
+            :hover{
+                scale: 1.2;
+            }
+        }
+    }
+        
+}

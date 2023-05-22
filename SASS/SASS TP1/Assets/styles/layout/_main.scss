@@ -1,0 +1,43 @@
+section{
+    background: whitesmoke;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5%;
+    Img{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+.section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    h2{
+        font-size: 3.5rem;
+        width: 60%;
+        margin-bottom: 2rem;
+    }
+    p{
+        width: 60%;
+        margin-bottom: 2rem;
+        font-style: italic;
+        line-height: 3rem;
+    }
+    h4{
+        margin-bottom: 3rem;
+        
+        ::before{
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 30%;
+            background: red;
+            top: 0;
+            left: 0;
+        }
+    }
+}

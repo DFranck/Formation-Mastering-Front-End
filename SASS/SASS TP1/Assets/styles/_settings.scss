@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+// @mixin center
+
+
+@font-face {
+    font-family: "font1";
+    src: url(../Fonts/inter/static/Inter-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "font2";
+    src: url(../Fonts/Merriweather/Merriweather-Light.ttf);
+}
+h1, li,h2, h3, label,button,input[type=submit]{
+    font-family: "font1";
+    text-transform: uppercase;
+}
+p, h4{
+    font-weight: 100;
+    font-family: "font2";
+    font-size: .8rem;
+}
+
+li, label, input{
+    cursor: pointer;
+}
+
+button{
+    padding: 1rem 4rem;
+    cursor: pointer;
+}
+body{
+    background: url(../img/bg.jpg) fixed center/cover;
+    height: 100vh;
+}
