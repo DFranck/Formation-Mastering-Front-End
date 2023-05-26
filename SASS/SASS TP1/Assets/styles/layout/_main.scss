@@ -1,14 +1,13 @@
 section{
-    background: whitesmoke;
+    background: white;
     width: 80%;
     margin: 0 auto;
     padding: 5%;
-    Img{
+    img{
         width: 100%;
         margin-bottom: 2rem;
     }
 }
-
 .section1{
     display: flex;
     flex-direction: column;
@@ -16,6 +15,25 @@ section{
     align-items: center;
     text-align: center;
     position: relative;
+    
+    &::before{
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 35%;
+        background: rgb(198, 198, 198);
+        top: 5.5vw;
+        left: 4vw;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 35%;
+        background: rgb(198, 198, 198);
+        top: 5.5vw;
+        left: 47vw;
+    }
     h2{
         font-size: 3.5rem;
         width: 60%;
@@ -28,16 +46,71 @@ section{
         line-height: 3rem;
     }
     h4{
-        margin-bottom: 3rem;
-        
-        ::before{
-            content: "";
-            position: absolute;
-            height: 1px;
-            width: 30%;
-            background: red;
-            top: 0;
-            left: 0;
+        margin-bottom: 3vw;
+        font-size: 1vw;
+    }
+
+    @media screen and (max-width:1000px) {
+        h2{
+            font-size: 2.5rem;
+        }
+        h4{
+            font-size: 1.4vw;
+        }
+        button{
+            transform: scale(0.8);
+        }
+    }
+    @media screen and (max-width:550px) {
+        h2{
+            font-size: 2rem;
+            width: 100%;
+        }
+        h4{
+            font-size: 2vw;
+            // font-weight: bold;
         }
     }
 }
+
+.part2{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    border-top: 1px solid rgb(198, 198, 198);
+    p{
+        text-align: justify;
+    }
+    h2, h4 {
+        text-align: center;
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+    }
+    button{
+        display: block;
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+    .section2{
+        border-right: 1px solid rgb(198, 198, 198);
+    }
+}
+@media screen and (max-width:1000px) {
+   .part2{
+    display: block;
+    width: 100%;
+    border: 0;
+}
+.part2 .section2{
+    border: 0;
+    border-top: 1px solid rgb(198, 198, 198);
+}
+    button{
+        transform: scale(0.8);
+    }
+}
+@media screen and (max-width:550px) {
+    
+}
+

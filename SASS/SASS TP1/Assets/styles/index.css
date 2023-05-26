@@ -31,6 +31,7 @@ li, label, input {
 button {
   padding: 1rem 4rem;
   cursor: pointer;
+  background: transparent;
 }
 
 body {
@@ -86,14 +87,45 @@ header nav .navLeft ul :hover {
 header nav .navRight ul :hover {
   scale: 1.2;
 }
+@media screen and (max-width: 1305px) {
+  header h1 {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 1045px) {
+  header h1 {
+    font-size: 3rem;
+    width: 90%;
+  }
+  header nav {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  header h1 {
+    font-size: 2rem;
+    width: 100%;
+  }
+  header nav .navLeft {
+    width: 100%;
+  }
+  header nav .navLeft ul {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2vw;
+  }
+  header nav .navRight {
+    display: none;
+  }
+}
 
 section {
-  background: whitesmoke;
+  background: white;
   width: 80%;
   margin: 0 auto;
   padding: 5%;
 }
-section Img {
+section img {
   width: 100%;
   margin-bottom: 2rem;
 }
@@ -105,6 +137,24 @@ section Img {
   align-items: center;
   text-align: center;
   position: relative;
+}
+.section1::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 35%;
+  background: rgb(198, 198, 198);
+  top: 5.5vw;
+  left: 4vw;
+}
+.section1::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 35%;
+  background: rgb(198, 198, 198);
+  top: 5.5vw;
+  left: 47vw;
 }
 .section1 h2 {
   font-size: 3.5rem;
@@ -118,21 +168,177 @@ section Img {
   line-height: 3rem;
 }
 .section1 h4 {
-  margin-bottom: 3rem;
+  margin-bottom: 3vw;
+  font-size: 1vw;
 }
-.section1 h4 ::before {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 30%;
-  background: red;
-  top: 0;
-  left: 0;
+@media screen and (max-width: 1000px) {
+  .section1 h2 {
+    font-size: 2.5rem;
+  }
+  .section1 h4 {
+    font-size: 1.4vw;
+  }
+  .section1 button {
+    transform: scale(0.8);
+  }
+}
+@media screen and (max-width: 550px) {
+  .section1 h2 {
+    font-size: 2rem;
+    width: 100%;
+  }
+  .section1 h4 {
+    font-size: 2vw;
+  }
 }
 
+.part2 {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  border-top: 1px solid rgb(198, 198, 198);
+}
+.part2 p {
+  text-align: justify;
+}
+.part2 h2, .part2 h4 {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+.part2 button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.part2 .section2 {
+  border-right: 1px solid rgb(198, 198, 198);
+}
+
+@media screen and (max-width: 1000px) {
+  .part2 {
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+  .part2 .section2 {
+    border: 0;
+    border-top: 1px solid rgb(198, 198, 198);
+  }
+  button {
+    transform: scale(0.8);
+  }
+}
 footer {
   padding: 5% 10%;
 }
 footer div {
   background: whitesmoke;
+}
+
+.footer {
+  display: flex;
+  color: gray;
+  position: relative;
+}
+.footer::after {
+  content: "";
+  position: absolute;
+  background: rgb(198, 198, 198);
+  height: 1px;
+  width: 50%;
+  left: 50%;
+  top: 75%;
+}
+.footer .footerLeft {
+  width: 50%;
+  border-right: 1px solid rgb(198, 198, 198);
+  padding: 5%;
+}
+.footer .footerLeft form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer .footerLeft form label {
+  font-size: 0.8rem;
+}
+.footer .footerLeft form input {
+  border: 1px solid rgb(198, 198, 198);
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background: transparent;
+}
+.footer .footerLeft form input[type=submit] {
+  margin-top: 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 4rem;
+  border-radius: 0;
+  border: 2px solid gray;
+  color: gray;
+}
+.footer .footerLeft form textarea {
+  resize: none;
+  border: 1px solid rgb(198, 198, 198);
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background: transparent;
+}
+.footer .footerRight {
+  width: 50%;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  font-size: 0.8rem;
+  position: relative;
+}
+.footer .footerRight::after {
+  content: "";
+  position: absolute;
+  background: rgb(198, 198, 198);
+  height: 1px;
+  width: 100%;
+}
+.footer .footerRight::before {
+  content: "";
+  position: absolute;
+  background: rgb(198, 198, 198);
+  height: 0.5px;
+  width: 100%;
+  top: 25%;
+}
+.footer .footerRight ul {
+  display: flex;
+  gap: 2rem;
+  color: black;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    display: block;
+  }
+  .footer::after {
+    content: "";
+    position: absolute;
+    background: red;
+    height: 1px;
+    width: 100%;
+    left: 0%;
+    top: 50%;
+  }
+  .footer .footerLeft {
+    width: 100%;
+    padding: 10%;
+  }
+  .footer .footerRight {
+    width: 100%;
+    gap: 10vw;
+    padding-bottom: 5vw;
+  }
 }/*# sourceMappingURL=index.css.map */

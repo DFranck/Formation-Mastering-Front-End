@@ -50,5 +50,37 @@ header{
             }
         }
     }
-        
+    @media screen and (max-width:1305px) {
+        h1{
+            font-size: 4rem;
+        }
+    }
+    @media screen and (max-width:1045px) {
+        h1{
+            font-size: 3rem;
+            width: 90%;
+        }
+        nav{
+            font-size: .8rem;
+        }
+    }
+    @media screen and (max-width:800px) {
+        h1{
+            font-size: 2rem;
+            width: 100%;
+        }
+        nav{
+            .navLeft{
+                width: 100%;
+                ul{
+                    display: flex;
+                    justify-content: space-between;
+                font-size: 2vw;
+                }
+            }
+            .navRight{
+                display: none;
+            }
+        }
+    }
 }
