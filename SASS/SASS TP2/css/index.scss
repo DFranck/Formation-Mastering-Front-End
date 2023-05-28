@@ -2,10 +2,10 @@
 @use "./variables";
 @use "./reset";
 
-@use "./components/button";
-@use "./components/card";
-@use "./components/nav";
+@use "../assets/components/button";
+@use "../assets/components/card";
+@use "../assets/components/nav";
 
-@use "./layout/header";
-@use "./layout/main";
-@use "./layout/footer";
+@use "../assets/layout/header";
+@use "../assets/layout/main";
+@use "../assets/layout/footer";
