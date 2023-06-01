@@ -1,0 +1,25 @@
+@use "../mixins" as mix;
+@use "../variables" as vars;
+
+nav{
+    color: whitesmoke;
+    @include mix.flex-center;
+    h1{
+        margin: 1vw 1.5vw;
+        font-size: 3rem;
+    }
+    ul{
+        font-family: vars.$fontP;
+        text-transform: uppercase;
+        display: flex;
+        margin: 0 1.5vw;
+        font-size: .8rem;
+        li{
+            margin: 0 2vw;
+        }
+    }
+    i{
+        margin: 0 1vw;
+        font-size: .8rem;
+    }
+}

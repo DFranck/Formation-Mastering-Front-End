@@ -10,7 +10,167 @@
   font-family: "roboto";
   src: url(../assets/fonts/Roboto/Roboto-Light.ttf);
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  background: rgb(38, 36, 36);
+}
+
+h1 {
+  font-family: allura, serif;
+  color: whitesmoke;
+}
+h1 span {
+  color: rgb(150, 103, 17);
+  font-family: allura, serif;
+  font-weight: 100;
+}
+h1 strong {
+  color: whitesmoke;
+  font-family: poppins, serif;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+h2 span {
+  color: rgb(150, 103, 17);
+  font-family: allura, serif;
+  font-weight: 100;
+}
+h2 strong {
+  color: whitesmoke;
+  font-family: poppins, serif;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: rgb(150, 103, 17);
+  font-family: roboto, sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+h4 {
+  color: rgb(150, 103, 17);
+  font-family: roboto, sans-serif;
+  font-weight: 100;
+}
+
+nav {
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav h1 {
+  margin: 1vw 1.5vw;
+  font-size: 3rem;
+}
+nav ul {
+  font-family: roboto, sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  margin: 0 1.5vw;
+  font-size: 0.8rem;
+}
+nav ul li {
+  margin: 0 2vw;
+}
+nav i {
+  margin: 0 1vw;
+  font-size: 0.8rem;
+}
+
 header {
-  background: url(../img/bg-slider-06.jpg);
+  background: url(./../assets/img/bg-slider-06.jpg) center/cover;
   height: 100vh;
+  color: whitesmoke;
+}
+header .header-container {
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header .header-container h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 2.5rem;
+  margin-bottom: 40px;
+  font-size: 3.5rem;
+}
+header .header-container img {
+  width: 2%;
+}
+header .header-container p {
+  margin-top: 40px;
+  font-family: roboto, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+main .section1 {
+  background: whitesmoke;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+main .section1 .s1-left-part {
+  margin: 20px;
+  border: 1px dotted rgb(150, 103, 17);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  gap: 30px;
+}
+main .section1 .s1-left-part h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.5rem;
+}
+main .section1 .s1-left-part h2 span {
+  font-size: 2.5rem;
+}
+main .section1 .s1-left-part h2 strong {
+  color: black;
+}
+main .section1 .s1-left-part p {
+  font-family: roboto, sans-serif;
+}
+main .section1 .s1-left-part div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .section1 .s1-left-part div .img-container {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background: url(./../assets/img/avatar-01.jpg) center/cover;
+  margin-bottom: 20px;
+}
+main .section1 .s1-left-part div h4 {
+  color: black;
+  font-family: poppins, serif;
+}
+main .section1 .s1-left-part div h5 {
+  color: rgb(188, 188, 188);
+  text-transform: uppercase;
+  font-family: roboto, sans-serif;
+}
+main .section1 .s1-right-part .img-container {
+  width: 100%;
+  height: 100%;
+  background: url(./../assets/img/store-01.jpg) center/cover;
 }/*# sourceMappingURL=index.css.map */

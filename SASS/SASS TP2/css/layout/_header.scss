@@ -1,0 +1,33 @@
+@use "../mixins" as mix;
+@use "../variables" as vars;
+
+header{
+    background: url(./../assets/img/bg-slider-06.jpg)center/cover;
+    height: 100vh;
+    color: whitesmoke;
+    .header-container{
+        height: 65%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 2.5rem;
+            margin-bottom: 40px;
+            font-size: 3.5rem;
+        }
+        img{
+            width: 2%;
+        }
+        p{
+            margin-top: 40px;
+            font-family: vars.$fontP;
+            text-transform: uppercase;
+            letter-spacing: .25rem;
+        }
+    }
+}

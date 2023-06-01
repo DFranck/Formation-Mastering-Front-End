@@ -1,0 +1,48 @@
+@use "../mixins" as mix;
+@use "../variables" as vars;
+
+body{
+    background: vars.$brown;
+}
+
+h1{
+    font-family: vars.$fontStyle;
+    color: whitesmoke;
+    span{
+        color: vars.$orange;
+        font-family: vars.$fontStyle;
+        font-weight: 100;
+    }
+    strong{
+        color: whitesmoke;
+        font-family: vars.$fontTitle;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+    }
+}
+
+h2{
+    span{
+        color: vars.$orange;
+        font-family: vars.$fontStyle;
+        font-weight: 100;
+    }
+    strong{
+        color: whitesmoke;
+        font-family: vars.$fontTitle;
+        text-transform: uppercase;
+    }
+}
+h3{
+    color: vars.$orange;
+        font-family: vars.$fontP;
+        font-weight: 100;
+        text-transform: uppercase;
+    }
+    
+    h4{
+    color: vars.$orange;
+        font-family: vars.$fontP;
+        font-weight: 100;
+
+}
