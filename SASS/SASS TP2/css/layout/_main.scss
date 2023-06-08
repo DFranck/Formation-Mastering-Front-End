@@ -58,4 +58,293 @@ main{
             }
         }
     }
+
+    .section2{
+        @include mix.flex-center;
+        flex-direction: column;
+        margin: 40px 0 160px;
+        gap: 40px;
+        position: relative;
+        .background-s2{
+            position: absolute;
+            background: url(./../assets/img/bg-menu-01.jpg) center/cover;
+            width: 100vw;
+            height: 60vh;
+            z-index: -1;
+            top: 40%;
+        }
+        .s2-header{
+            @include mix.flex-center;
+            flex-direction: column;
+            gap: 20px;
+            ul{
+                @include mix.flex-center;
+                text-decoration: underline;
+                gap: 80px;
+                color: whitesmoke;
+            }
+
+        }
+        .s2-core{
+            background: whitesmoke;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            border-top: 3px solid vars.$orange;
+            padding-bottom: 20px;
+            .grid-meal{
+                display: grid ;
+                grid-template-columns: 30% 50% 20% ;
+                align-items: center;
+                margin: 20px 20px 0 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px dotted gray;
+                h2{
+                    font-family: vars.$fontP;
+                    font-size: 1rem;
+                }
+                h4{
+                    font-family: vars.$fontP;
+                    font-size: .8rem;
+                }
+                h3{
+                    font-weight: 700;
+                }
+                .img-container{
+                    border-radius: 100px;
+                }
+            }
+            :nth-child(1){
+                .img-container{
+                    background: url(./../assets/img/dish-item-01.jpg) center/cover;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            :nth-child(2){
+                .img-container{
+                    background: url(./../assets/img/dish-item-02.jpg) center/cover;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            :nth-child(3){
+                .img-container{
+                    background: url(./../assets/img/dish-item-03.jpg) center/cover;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            :nth-child(4){
+                .img-container{
+                    background: url(./../assets/img/dish-item-04.jpg) center/cover;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            :nth-child(5){
+                .img-container{
+                    background: url(./../assets/img/dish-item-05.jpg) center/cover;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            :nth-child(6){
+                .img-container{
+                    background: url(./../assets/img/dish-item-06.jpg) center/cover;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            :nth-child(7){
+                .img-container{
+                    background: url(./../assets/img/dish-item-07.jpg) center/cover;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            :nth-child(8){
+                .img-container{
+                    background: url(./../assets/img/dish-item-08.jpg) center/cover;
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+        
+    }
+    .section3{
+        display: grid;
+        grid-template-columns: 35% 65%;
+        width: 80%;
+        margin: 0 auto;
+
+        .s3-left-container{
+            background: black;
+            padding: 20px;
+        }
+        .s3-left-part{
+            border: 1px dotted whitesmoke;
+            padding: 20px 60px;
+            @include mix.flex-center;
+            flex-direction: column;
+            color: whitesmoke;
+            h2{
+                margin-bottom: 20px;
+                @include mix.flex-center;
+                flex-direction: column;
+                line-height: 1.25rem;
+                span{
+                    font-size: 2rem;
+                }
+            }
+            h3{
+                font-family: vars.$fontTitle;
+                margin: 50px 0 20px;
+            }
+            p{
+                font-family: vars.$fontP;
+            }
+        }
+        .s3-right-part{
+            background: whitesmoke; 
+            @include mix.flex-center;
+            flex-direction: column;
+            h2{
+                @include mix.flex-center;
+                flex-direction: column;
+                margin-bottom: 30px;
+                line-height: 1.5rem;
+                span{
+                    font-size: 2rem;
+    
+                }
+                strong{
+                    color: black;
+                }
+            }
+            form{
+                margin-top: 30px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 2fr;
+                grid-template-areas:
+                "input1 input2 input3"
+                "input4 input5 input6" 
+                "sub sub sub";
+            }
+            input, select{
+                border: none;
+                margin: 20px 10px;
+                background: none;
+                border-bottom: 1px solid #000;
+                cursor: pointer;
+            }
+            input[type=submit]{
+                margin-top: 30px;
+                background: black;
+                color: whitesmoke;
+                border-radius: 30px;
+                padding: 15px 30px;
+                font-family: vars.$fontTitle;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+            }
+            .input1{
+                grid-area: input1;
+            }
+            .input2{
+                grid-area: input2;
+            }
+            .input3{
+                grid-area: input3;
+            }
+            .input4{
+                grid-area: input4;
+            }
+            .input5{
+                grid-area: input5;
+            }
+            .input6{
+                grid-area: input6;
+            }
+            .sub{
+                grid-area: sub;
+                width: fit-content;
+                margin: 0 auto;
+                height: fit-content;
+
+            }
+            
+        }
+    }
+    .section4{
+        @include mix.flex-center;
+        flex-direction: column;
+        width: 75%;
+        margin: 80px auto 80px;
+        .s4-intro{
+            @include mix.flex-center;
+            flex-direction: column;
+            h2{
+                @include mix.flex-center;
+                flex-direction: column;
+                margin-bottom: 30px;
+                line-height: 1.8rem;
+                span{
+                    font-size: 2rem;
+    
+                }
+                strong{
+                    color: whitesmoke;
+                }
+            }
+        }
+        .s4-core{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 40vw 30vw;
+            grid-template-rows: 15vw 15vw;
+            grid-template-areas: 
+            "lt right"
+            "lb right";
+            gap: 15px;
+            
+            .s4-left-top{
+                background-color: whitesmoke;
+                grid-area: lt;
+             }
+            .s4-left-bottom{
+                background-color: whitesmoke;
+                grid-area: lb;
+            }
+            .s4-right{
+                grid-area: right;
+                .img{
+                background: url(./../assets/img/event-03.jpg) center/cover;
+                height: 100%;
+                width: 100%;
+                padding: 5%;
+                    .event{
+                        background: whitesmoke;
+                        width: 100%;
+                        height: 100%;
+                        @include mix.flex-center;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        padding-bottom: 50px;
+                        .date{
+                            @include mix.flex-center;
+                            flex-direction: column;
+                            background: black;
+                            width: 20%;
+                            height: 20%;
+                            h4, h5{
+                                color: whitesmoke;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

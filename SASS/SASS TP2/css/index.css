@@ -55,7 +55,7 @@ h3 {
   text-transform: uppercase;
 }
 
-h4 {
+h4, h5 {
   color: rgb(150, 103, 17);
   font-family: roboto, sans-serif;
   font-weight: 100;
@@ -173,4 +173,289 @@ main .section1 .s1-right-part .img-container {
   width: 100%;
   height: 100%;
   background: url(./../assets/img/store-01.jpg) center/cover;
+}
+main .section2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 40px 0 160px;
+  gap: 40px;
+  position: relative;
+}
+main .section2 .background-s2 {
+  position: absolute;
+  background: url(./../assets/img/bg-menu-01.jpg) center/cover;
+  width: 100vw;
+  height: 60vh;
+  z-index: -1;
+  top: 40%;
+}
+main .section2 .s2-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+main .section2 .s2-header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+  gap: 80px;
+  color: whitesmoke;
+}
+main .section2 .s2-core {
+  background: whitesmoke;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-top: 3px solid rgb(150, 103, 17);
+  padding-bottom: 20px;
+}
+main .section2 .s2-core .grid-meal {
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+  align-items: center;
+  margin: 20px 20px 0 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted gray;
+}
+main .section2 .s2-core .grid-meal h2 {
+  font-family: roboto, sans-serif;
+  font-size: 1rem;
+}
+main .section2 .s2-core .grid-meal h4 {
+  font-family: roboto, sans-serif;
+  font-size: 0.8rem;
+}
+main .section2 .s2-core .grid-meal h3 {
+  font-weight: 700;
+}
+main .section2 .s2-core .grid-meal .img-container {
+  border-radius: 100px;
+}
+main .section2 .s2-core :nth-child(1) .img-container {
+  background: url(./../assets/img/dish-item-01.jpg) center/cover;
+  width: 50px;
+  height: 50px;
+}
+main .section2 .s2-core :nth-child(2) .img-container {
+  background: url(./../assets/img/dish-item-02.jpg) center/cover;
+  width: 50px;
+  height: 50px;
+}
+main .section2 .s2-core :nth-child(3) .img-container {
+  background: url(./../assets/img/dish-item-03.jpg) center/cover;
+  width: 50px;
+  height: 50px;
+}
+main .section2 .s2-core :nth-child(4) .img-container {
+  background: url(./../assets/img/dish-item-04.jpg) center/cover;
+  width: 50px;
+  height: 50px;
+}
+main .section2 .s2-core :nth-child(5) .img-container {
+  background: url(./../assets/img/dish-item-05.jpg) center/cover;
+  width: 50px;
+  height: 50px;
+}
+main .section2 .s2-core :nth-child(6) .img-container {
+  background: url(./../assets/img/dish-item-06.jpg) center/cover;
+  width: 50px;
+  height: 50px;
+}
+main .section2 .s2-core :nth-child(7) .img-container {
+  background: url(./../assets/img/dish-item-07.jpg) center/cover;
+  width: 50px;
+  height: 50px;
+}
+main .section2 .s2-core :nth-child(8) .img-container {
+  background: url(./../assets/img/dish-item-08.jpg) center/cover;
+  width: 50px;
+  height: 50px;
+}
+main .section3 {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  width: 80%;
+  margin: 0 auto;
+}
+main .section3 .s3-left-container {
+  background: black;
+  padding: 20px;
+}
+main .section3 .s3-left-part {
+  border: 1px dotted whitesmoke;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: whitesmoke;
+}
+main .section3 .s3-left-part h2 {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1.25rem;
+}
+main .section3 .s3-left-part h2 span {
+  font-size: 2rem;
+}
+main .section3 .s3-left-part h3 {
+  font-family: poppins, serif;
+  margin: 50px 0 20px;
+}
+main .section3 .s3-left-part p {
+  font-family: roboto, sans-serif;
+}
+main .section3 .s3-right-part {
+  background: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .section3 .s3-right-part h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+  line-height: 1.5rem;
+}
+main .section3 .s3-right-part h2 span {
+  font-size: 2rem;
+}
+main .section3 .s3-right-part h2 strong {
+  color: black;
+}
+main .section3 .s3-right-part form {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr;
+  grid-template-areas: "input1 input2 input3" "input4 input5 input6" "sub sub sub";
+}
+main .section3 .s3-right-part input, main .section3 .s3-right-part select {
+  border: none;
+  margin: 20px 10px;
+  background: none;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+main .section3 .s3-right-part input[type=submit] {
+  margin-top: 30px;
+  background: black;
+  color: whitesmoke;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-family: poppins, serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+main .section3 .s3-right-part .input1 {
+  grid-area: input1;
+}
+main .section3 .s3-right-part .input2 {
+  grid-area: input2;
+}
+main .section3 .s3-right-part .input3 {
+  grid-area: input3;
+}
+main .section3 .s3-right-part .input4 {
+  grid-area: input4;
+}
+main .section3 .s3-right-part .input5 {
+  grid-area: input5;
+}
+main .section3 .s3-right-part .input6 {
+  grid-area: input6;
+}
+main .section3 .s3-right-part .sub {
+  grid-area: sub;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+main .section4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 75%;
+  margin: 80px auto 80px;
+}
+main .section4 .s4-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .section4 .s4-intro h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+  line-height: 1.8rem;
+}
+main .section4 .s4-intro h2 span {
+  font-size: 2rem;
+}
+main .section4 .s4-intro h2 strong {
+  color: whitesmoke;
+}
+main .section4 .s4-core {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40vw 30vw;
+  grid-template-rows: 15vw 15vw;
+  grid-template-areas: "lt right" "lb right";
+  gap: 15px;
+}
+main .section4 .s4-core .s4-left-top {
+  background-color: whitesmoke;
+  grid-area: lt;
+}
+main .section4 .s4-core .s4-left-bottom {
+  background-color: whitesmoke;
+  grid-area: lb;
+}
+main .section4 .s4-core .s4-right {
+  grid-area: right;
+}
+main .section4 .s4-core .s4-right .img {
+  background: url(./../assets/img/event-03.jpg) center/cover;
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+}
+main .section4 .s4-core .s4-right .img .event {
+  background: whitesmoke;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+main .section4 .s4-core .s4-right .img .event .date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: black;
+  width: 20%;
+  height: 20%;
+}
+main .section4 .s4-core .s4-right .img .event .date h4, main .section4 .s4-core .s4-right .img .event .date h5 {
+  color: whitesmoke;
 }/*# sourceMappingURL=index.css.map */
