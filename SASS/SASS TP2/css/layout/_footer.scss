@@ -1,0 +1,47 @@
+@use "../mixins" as mix;
+@use "../variables" as vars;
+
+footer{
+    background: url(./../assets/img/bg-footer.jpg) center/cover;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: whitesmoke;
+    .footer-left{
+        padding: 50px;
+        line-height: 30px;
+        width: 80%;
+        margin-left: 20%;
+        h2{
+            font-family: vars.$fontStyle;
+            color: vars.$orange;
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+    }
+    .footer-right{
+        padding: 50px;
+        display: grid;
+        grid-template-rows: 50% 50%;
+        h2{
+            font-family: vars.$fontP;
+        }
+        input, li {
+            color: gray;
+            background: none;
+        }
+        input{
+            margin-top: 5px;
+            padding: 5px;
+            border: 1px solid rgba(128, 128, 128, 0.2);
+        }
+        .f-r-bot{
+            @include mix.flex-center;
+            justify-content: flex-start;
+            gap: 40px;
+            ul{
+                @include mix.flex-center;
+                gap: 40px;
+            }
+        }
+    }
+}

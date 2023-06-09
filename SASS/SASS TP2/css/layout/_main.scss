@@ -292,7 +292,7 @@ main{
                 line-height: 1.8rem;
                 span{
                     font-size: 2rem;
-    
+                    
                 }
                 strong{
                     color: whitesmoke;
@@ -302,20 +302,110 @@ main{
         .s4-core{
             width: 100%;
             display: grid;
-            grid-template-columns: 40vw 30vw;
-            grid-template-rows: 15vw 15vw;
+            grid-template-columns: 60% 38%;
+            grid-template-rows: 14vw 14vw;
             grid-template-areas: 
             "lt right"
             "lb right";
             gap: 15px;
-            
+            margin-top: 50px;
+            h4{
+                color: #000;
+                font-size: 1.3rem;
+                text-align: center;
+            }
+            p{
+                color: rgba(128, 128, 128, 0.6)
+            }
+            button{
+                border: none;
+                text-transform: uppercase
+            }
             .s4-left-top{
                 background-color: whitesmoke;
                 grid-area: lt;
+                @include mix.flex-center;
+                justify-content: space-between;
+                .img{
+                    @include mix.flex-center;
+                    background: url(./../assets/img/event-01.jpg) center/cover;
+                    width: 100%;
+                    height: 100%;
+                    .date{
+                        @include mix.flex-center;
+                        flex-direction: column;
+                        background: black;
+                        width: 60px;
+                        height: 60px;
+                        h4{
+                            font-weight: 700;
+                            font-size: 1.1rem;
+                        }
+                        h5{
+                            font-size: .8rem;
+                        }
+                        h4, h5{
+                            color: whitesmoke;
+                        }
+                    }
+                }
+                .event{
+                    padding: 20px;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    h4{
+                        text-align: justify;
+                    }
+                    button{
+                        width: fit-content;
+                    }
+                }
              }
             .s4-left-bottom{
                 background-color: whitesmoke;
                 grid-area: lb;
+                @include mix.flex-center;
+                justify-content: space-between;
+                .img{
+                    @include mix.flex-center;
+                    background: url(./../assets/img/event-02.jpg) center/cover;
+                    width: 100%;
+                    height: 100%;
+                    .date{
+                        @include mix.flex-center;
+                        flex-direction: column;
+                        background: black;
+                        width: 60px;
+                        height: 60px;
+                        h4{
+                            font-weight: 700;
+                            font-size: 1.1rem;
+                        }
+                        h5{
+                            font-size: .8rem;
+                        }
+                        h4, h5{
+                            color: whitesmoke;
+                        }
+                    }
+                }
+                .event{
+                    padding: 20px;
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    h4{
+                        text-align: justify;
+                    }
+                    button{
+                        width: fit-content;
+                    }
+                }
             }
             .s4-right{
                 grid-area: right;
@@ -331,13 +421,21 @@ main{
                         @include mix.flex-center;
                         flex-direction: column;
                         justify-content: space-between;
-                        padding-bottom: 50px;
+                        padding: 0 20px 50px;
+                        
                         .date{
                             @include mix.flex-center;
                             flex-direction: column;
                             background: black;
-                            width: 20%;
-                            height: 20%;
+                            width: 60px;
+                            height: 60px;
+                            h4{
+                                font-weight: 700;
+                                font-size: 1.1rem;
+                            }
+                            h5{
+                                font-size: .8rem;
+                            }
                             h4, h5{
                                 color: whitesmoke;
                             }
@@ -345,6 +443,38 @@ main{
                     }
                 }
             }
+        }
+    }
+    .section5{
+        position: relative;
+        @include mix.flex-center;
+        flex-direction: column;
+        padding: 50px;
+        gap: 20px;
+        background: whitesmoke;
+        width: 75%;
+        margin: 0 auto 200px;
+        h3{
+            color: #000;
+        }
+        p{
+            margin-bottom: 30px;
+        }
+        img{
+            width: 50px;
+            border-radius: 50px;
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .background-img{
+            position: absolute;
+            background: url(./../assets/img/gmap.jpg) center/cover;
+            width: 100vw;
+            height: 280px;
+            z-index: -1;
+            top: 70%;
         }
     }
 }

@@ -414,18 +414,123 @@ main .section4 .s4-intro h2 strong {
 main .section4 .s4-core {
   width: 100%;
   display: grid;
-  grid-template-columns: 40vw 30vw;
-  grid-template-rows: 15vw 15vw;
+  grid-template-columns: 60% 38%;
+  grid-template-rows: 14vw 14vw;
   grid-template-areas: "lt right" "lb right";
   gap: 15px;
+  margin-top: 50px;
+}
+main .section4 .s4-core h4 {
+  color: #000;
+  font-size: 1.3rem;
+  text-align: center;
+}
+main .section4 .s4-core p {
+  color: rgba(128, 128, 128, 0.6);
+}
+main .section4 .s4-core button {
+  border: none;
+  text-transform: uppercase;
 }
 main .section4 .s4-core .s4-left-top {
   background-color: whitesmoke;
   grid-area: lt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+main .section4 .s4-core .s4-left-top .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./../assets/img/event-01.jpg) center/cover;
+  width: 100%;
+  height: 100%;
+}
+main .section4 .s4-core .s4-left-top .img .date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: black;
+  width: 60px;
+  height: 60px;
+}
+main .section4 .s4-core .s4-left-top .img .date h4 {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+main .section4 .s4-core .s4-left-top .img .date h5 {
+  font-size: 0.8rem;
+}
+main .section4 .s4-core .s4-left-top .img .date h4, main .section4 .s4-core .s4-left-top .img .date h5 {
+  color: whitesmoke;
+}
+main .section4 .s4-core .s4-left-top .event {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .section4 .s4-core .s4-left-top .event h4 {
+  text-align: justify;
+}
+main .section4 .s4-core .s4-left-top .event button {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 main .section4 .s4-core .s4-left-bottom {
   background-color: whitesmoke;
   grid-area: lb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+main .section4 .s4-core .s4-left-bottom .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./../assets/img/event-02.jpg) center/cover;
+  width: 100%;
+  height: 100%;
+}
+main .section4 .s4-core .s4-left-bottom .img .date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: black;
+  width: 60px;
+  height: 60px;
+}
+main .section4 .s4-core .s4-left-bottom .img .date h4 {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+main .section4 .s4-core .s4-left-bottom .img .date h5 {
+  font-size: 0.8rem;
+}
+main .section4 .s4-core .s4-left-bottom .img .date h4, main .section4 .s4-core .s4-left-bottom .img .date h5 {
+  color: whitesmoke;
+}
+main .section4 .s4-core .s4-left-bottom .event {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .section4 .s4-core .s4-left-bottom .event h4 {
+  text-align: justify;
+}
+main .section4 .s4-core .s4-left-bottom .event button {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 main .section4 .s4-core .s4-right {
   grid-area: right;
@@ -445,7 +550,7 @@ main .section4 .s4-core .s4-right .img .event {
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 50px;
+  padding: 0 20px 50px;
 }
 main .section4 .s4-core .s4-right .img .event .date {
   display: flex;
@@ -453,9 +558,99 @@ main .section4 .s4-core .s4-right .img .event .date {
   align-items: center;
   flex-direction: column;
   background: black;
-  width: 20%;
-  height: 20%;
+  width: 60px;
+  height: 60px;
+}
+main .section4 .s4-core .s4-right .img .event .date h4 {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+main .section4 .s4-core .s4-right .img .event .date h5 {
+  font-size: 0.8rem;
 }
 main .section4 .s4-core .s4-right .img .event .date h4, main .section4 .s4-core .s4-right .img .event .date h5 {
   color: whitesmoke;
+}
+main .section5 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  gap: 20px;
+  background: whitesmoke;
+  width: 75%;
+  margin: 0 auto 200px;
+}
+main .section5 h3 {
+  color: #000;
+}
+main .section5 p {
+  margin-bottom: 30px;
+}
+main .section5 img {
+  width: 50px;
+  border-radius: 50px;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .section5 .background-img {
+  position: absolute;
+  background: url(./../assets/img/gmap.jpg) center/cover;
+  width: 100vw;
+  height: 280px;
+  z-index: -1;
+  top: 70%;
+}
+
+footer {
+  background: url(./../assets/img/bg-footer.jpg) center/cover;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  color: whitesmoke;
+}
+footer .footer-left {
+  padding: 50px;
+  line-height: 30px;
+  width: 80%;
+  margin-left: 20%;
+}
+footer .footer-left h2 {
+  font-family: allura, serif;
+  color: rgb(150, 103, 17);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+footer .footer-right {
+  padding: 50px;
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+footer .footer-right h2 {
+  font-family: roboto, sans-serif;
+}
+footer .footer-right input, footer .footer-right li {
+  color: gray;
+  background: none;
+}
+footer .footer-right input {
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+}
+footer .footer-right .f-r-bot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+}
+footer .footer-right .f-r-bot ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
 }/*# sourceMappingURL=index.css.map */
