@@ -21,13 +21,25 @@ header{
             font-size: 3.5rem;
         }
         img{
-            width: 2%;
+            width: 40px;
         }
         p{
             margin-top: 40px;
             font-family: vars.$fontP;
             text-transform: uppercase;
             letter-spacing: .25rem;
+        }
+    }
+    @media screen and (max-width: 550px) {
+        .header-container{
+            justify-content: space-evenly;
+            h1{
+                line-height: 5rem;
+            }
+            p{
+                margin: 0;
+                text-align: center;
+            }
         }
     }
 }

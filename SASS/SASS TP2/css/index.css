@@ -81,9 +81,27 @@ nav ul {
 nav ul li {
   margin: 0 2vw;
 }
-nav i {
+nav .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+nav .social i {
   margin: 0 1vw;
   font-size: 0.8rem;
+}
+@media screen and (max-width: 800px) {
+  nav {
+    justify-content: space-around;
+    padding-top: 2vw;
+  }
+  nav ul {
+    display: none;
+  }
+  nav h1 {
+    font-size: 2rem;
+  }
 }
 
 header {
@@ -108,7 +126,7 @@ header .header-container h1 {
   font-size: 3.5rem;
 }
 header .header-container img {
-  width: 2%;
+  width: 40px;
 }
 header .header-container p {
   margin-top: 40px;
@@ -116,11 +134,28 @@ header .header-container p {
   text-transform: uppercase;
   letter-spacing: 0.25rem;
 }
+@media screen and (max-width: 550px) {
+  header .header-container {
+    justify-content: space-evenly;
+  }
+  header .header-container h1 {
+    line-height: 5rem;
+  }
+  header .header-container p {
+    margin: 0;
+    text-align: center;
+  }
+}
 
 main .section1 {
   background: whitesmoke;
   display: grid;
   grid-template-columns: 50% 50%;
+}
+@media screen and (max-width: 800px) {
+  main .section1 {
+    grid-template-columns: 100%;
+  }
 }
 main .section1 .s1-left-part {
   margin: 20px;
@@ -206,12 +241,23 @@ main .section2 .s2-header ul {
   gap: 80px;
   color: whitesmoke;
 }
+@media screen and (max-width: 650px) {
+  main .section2 .s2-header ul {
+    gap: 3vw;
+  }
+}
 main .section2 .s2-core {
   background: whitesmoke;
   display: grid;
   grid-template-columns: 50% 50%;
   border-top: 3px solid rgb(150, 103, 17);
   padding-bottom: 20px;
+}
+@media screen and (max-width: 650px) {
+  main .section2 .s2-core {
+    grid-template-columns: 100%;
+    width: 80%;
+  }
 }
 main .section2 .s2-core .grid-meal {
   display: grid;
@@ -281,6 +327,11 @@ main .section3 {
   width: 80%;
   margin: 0 auto;
 }
+@media screen and (max-width: 1000px) {
+  main .section3 {
+    grid-template-columns: 100%;
+  }
+}
 main .section3 .s3-left-container {
   background: black;
   padding: 20px;
@@ -319,6 +370,11 @@ main .section3 .s3-right-part {
   align-items: center;
   flex-direction: column;
 }
+@media screen and (max-width: 1000px) {
+  main .section3 .s3-right-part {
+    padding-top: 50px;
+  }
+}
 main .section3 .s3-right-part h2 {
   display: flex;
   justify-content: center;
@@ -339,6 +395,14 @@ main .section3 .s3-right-part form {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 2fr;
   grid-template-areas: "input1 input2 input3" "input4 input5 input6" "sub sub sub";
+}
+@media screen and (max-width: 700px) {
+  main .section3 .s3-right-part form {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+    grid-template-areas: "input1" "input2" "input3" "input4" "input5" "input6" "sub" "sub" "sub";
+    width: 60%;
+  }
 }
 main .section3 .s3-right-part input, main .section3 .s3-right-part select {
   border: none;
@@ -390,6 +454,11 @@ main .section4 {
   flex-direction: column;
   width: 75%;
   margin: 80px auto 80px;
+}
+@media screen and (max-width: 1050px) {
+  main .section4 {
+    display: none;
+  }
 }
 main .section4 .s4-intro {
   display: flex;
@@ -583,11 +652,17 @@ main .section5 {
   width: 75%;
   margin: 0 auto 200px;
 }
+@media screen and (max-width: 1050px) {
+  main .section5 {
+    margin-top: 150px;
+  }
+}
 main .section5 h3 {
   color: #000;
 }
 main .section5 p {
   margin-bottom: 30px;
+  line-height: 30px;
 }
 main .section5 img {
   width: 50px;
@@ -617,6 +692,11 @@ footer .footer-left {
   line-height: 30px;
   width: 80%;
   margin-left: 20%;
+}
+@media screen and (max-width: 700px) {
+  footer .footer-left {
+    display: none;
+  }
 }
 footer .footer-left h2 {
   font-family: allura, serif;
@@ -653,4 +733,9 @@ footer .footer-right .f-r-bot ul {
   justify-content: center;
   align-items: center;
   gap: 40px;
+}
+@media screen and (max-width: 700px) {
+  footer .footer-right .f-r-bot {
+    display: none;
+  }
 }/*# sourceMappingURL=index.css.map */

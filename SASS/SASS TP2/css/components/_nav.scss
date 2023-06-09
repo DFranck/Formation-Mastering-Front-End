@@ -18,8 +18,23 @@ nav{
             margin: 0 2vw;
         }
     }
-    i{
-        margin: 0 1vw;
-        font-size: .8rem;
+    .social{
+        @include mix.flex-center;
+        height: 100%;
+
+        i{
+            margin: 0 1vw;
+            font-size: .8rem;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        ul{
+            display: none;
+        }
+        justify-content: space-around;
+        h1{
+            font-size: 2rem;
+        }
+        padding-top: 2vw;
     }
 }

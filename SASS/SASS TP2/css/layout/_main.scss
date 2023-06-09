@@ -6,6 +6,9 @@ main{
         background: whitesmoke;
         display: grid;
         grid-template-columns: 50% 50%;
+        @media screen and (max-width: 800px) {
+            grid-template-columns: 100%;
+        }
         .s1-left-part{
             margin: 20px;
             border: 1px dotted vars.$orange;
@@ -57,6 +60,7 @@ main{
                 background: url(./../assets/img/store-01.jpg) center/cover;
             }
         }
+        
     }
 
     .section2{
@@ -82,6 +86,9 @@ main{
                 text-decoration: underline;
                 gap: 80px;
                 color: whitesmoke;
+                @media screen and (max-width: 650px) {
+                    gap: 3vw;
+                }
             }
 
         }
@@ -91,6 +98,10 @@ main{
             grid-template-columns: 50% 50%;
             border-top: 3px solid vars.$orange;
             padding-bottom: 20px;
+            @media screen and (max-width: 650px) {
+                grid-template-columns: 100%;
+                width: 80%;
+            }
             .grid-meal{
                 display: grid ;
                 grid-template-columns: 30% 50% 20% ;
@@ -177,6 +188,9 @@ main{
         grid-template-columns: 35% 65%;
         width: 80%;
         margin: 0 auto;
+        @media screen and (max-width: 1000px) {
+            grid-template-columns: 100%;
+        }
 
         .s3-left-container{
             background: black;
@@ -209,6 +223,9 @@ main{
             background: whitesmoke; 
             @include mix.flex-center;
             flex-direction: column;
+            @media screen and (max-width: 1000px) {
+                padding-top: 50px;
+            }
             h2{
                 @include mix.flex-center;
                 flex-direction: column;
@@ -231,6 +248,21 @@ main{
                 "input1 input2 input3"
                 "input4 input5 input6" 
                 "sub sub sub";
+                 @media screen and (max-width: 700px) {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 2fr;
+                    grid-template-areas:
+                        "input1"
+                        "input2"
+                        "input3"
+                        "input4"
+                        "input5"
+                        "input6"
+                        "sub"
+                        "sub"
+                        "sub";
+                    width: 60%;
+            }
             }
             input, select{
                 border: none;
@@ -282,6 +314,9 @@ main{
         flex-direction: column;
         width: 75%;
         margin: 80px auto 80px;
+        @media screen and (max-width: 1050px) {
+            display: none;
+        }
         .s4-intro{
             @include mix.flex-center;
             flex-direction: column;
@@ -454,11 +489,15 @@ main{
         background: whitesmoke;
         width: 75%;
         margin: 0 auto 200px;
+        @media screen and (max-width: 1050px) {
+            margin-top: 150px;
+        }
         h3{
             color: #000;
         }
         p{
             margin-bottom: 30px;
+            line-height: 30px;
         }
         img{
             width: 50px;

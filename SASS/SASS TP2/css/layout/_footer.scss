@@ -11,6 +11,9 @@ footer{
         line-height: 30px;
         width: 80%;
         margin-left: 20%;
+        @media screen and (max-width: 700px) {
+            display: none;
+        }
         h2{
             font-family: vars.$fontStyle;
             color: vars.$orange;
@@ -41,6 +44,9 @@ footer{
             ul{
                 @include mix.flex-center;
                 gap: 40px;
+            }
+            @media screen and (max-width: 700px) {
+                display: none;
             }
         }
     }
