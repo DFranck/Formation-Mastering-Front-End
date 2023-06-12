@@ -1,0 +1,63 @@
+@use "../settings" as set;
+
+footer{
+    background: url(./../assets/img/bg-footer.jpg) center/cover;
+    text-align: left;
+    padding: 65px 32px;
+    color: set.$white;
+    .footer-content{
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        .left-part{
+            padding-right: 30px;
+            line-height: 30px;
+            h2{
+                font-family: set.$font1;
+                font-size: 2.5rem;
+                color: set.$color1;
+                font-weight: 100;
+                margin-bottom: 15px;
+            }
+            p{
+                font-size: .9rem;
+                color: set.$grey;
+            }
+        }
+        .right-part{
+            padding-left: 50px;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            h3{
+                font-size: .85rem;
+            }
+            input{
+                margin-top: 15px;
+                background: none;
+                border: 1px solid grey;
+                padding: 7px 13px;
+                width: 250px;
+            }
+            .follow-us{
+                display: flex;
+                align-items: center;
+                margin-top: 50px;
+                ul{
+                    @include set.alignChildren(space-around);
+                    flex-wrap: wrap;
+                    color: #595956;
+                    font-size: .8rem;
+                    width: 200px;
+                    i{
+                        transition: .2s;
+                        cursor: pointer;
+                        &:hover{
+                            transform: scale(1.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
