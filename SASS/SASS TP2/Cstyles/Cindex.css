@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Allura";
   src: url(../assets/fonts/Allura/Allura-Regular.ttf);
@@ -435,4 +436,58 @@ header .header-text div h6 {
 }
 .section4 .event-container .event-grid .event-3 .address h5 {
   padding: 45px 0;
+}
+
+.section5 {
+  padding: 70px 0 230px;
+  position: relative;
+}
+.section5::before {
+  content: "";
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background: url(./../assets/img/avatar-02.jpg) center/cover;
+  border-radius: 50px;
+  left: 50%;
+  top: 7%;
+  transform: translate(-50%);
+}
+.section5::after {
+  content: "";
+  height: 350px;
+  width: 100%;
+  position: absolute;
+  background: url(./../assets/img/gmap.jpg) center/cover;
+  z-index: -10;
+  left: 0;
+  bottom: 0;
+}
+.section5 .quote-container {
+  background: #eee;
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 65px 70px;
+  box-shadow: 0 0 3px black;
+}
+.section5 .quote-container .text-container {
+  line-height: 30px;
+}
+.section5 .quote-container .text-container p::before {
+  content: "❝";
+}
+.section5 .quote-container .text-container p::after {
+  content: "❞";
+}
+.section5 .quote-container .text-container p::before, .section5 .quote-container .text-container p::after {
+  font-size: 1.5rem;
+}
+.section5 .quote-container h2 {
+  margin: 30px 0 15px;
+  font-family: Roboto, serif;
+  font-weight: 100;
+}
+.section5 .quote-container > p {
+  color: rgb(166, 114, 69);
 }/*# sourceMappingURL=Cindex.css.map */
