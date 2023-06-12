@@ -62,4 +62,40 @@ header nav .nav-icons {
 }
 header nav li, header nav i {
   cursor: pointer;
+  transition: 0.2s;
+}
+header nav li:hover, header nav i:hover {
+  transform: scale(1.3);
+}
+header .header-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88vh;
+}
+header .header-text div {
+  margin-top: -150px;
+}
+header .header-text div h2 {
+  font-family: Allura, cursive;
+  font-size: 3rem;
+  font-weight: 100;
+  color: rgb(166, 114, 69);
+}
+header .header-text div h1 {
+  font-size: 3.2rem;
+  letter-spacing: 10px;
+  font-weight: 700;
+  font-family: Poppins, serif;
+  margin-top: -28px;
+  text-transform: uppercase;
+}
+header .header-text div img {
+  height: 27px;
+  margin: 32px 0;
+}
+header .header-text div h6 {
+  font-size: 0.75rem;
+  letter-spacing: 6px;
+  font-weight: 100;
 }/*# sourceMappingURL=Cindex.css.map */
