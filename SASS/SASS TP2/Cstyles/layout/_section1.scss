@@ -1,2 +1,41 @@
 @use "../settings" as set;
 
+.section1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background: set.$white;
+    .intro-text{
+        margin: 15px;
+        padding: 30px 15px;
+        border: 1px dashed set.$color1;
+        h2{
+            color: set.$color1;
+            font-family: set.$font1;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        h3{
+            margin-top: -12px;
+            font-family: set.$font2;
+        }
+        img{
+            margin: 26px;
+        }
+        img:nth-of-type(2){
+            height: 70px;
+            border-radius: 150px;
+            margin-bottom: 8px;
+        }
+        h4{
+            font-family: set.$font2;
+            font-weight: 100;
+        }
+        h5{
+            color: set.$grey;
+            font-size: .7rem;
+        }
+    }
+    .intro-pic{
+        background: url(./../assets/img/store-01.jpg) center/cover;
+    }
+}

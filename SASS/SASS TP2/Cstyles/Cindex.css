@@ -98,4 +98,44 @@ header .header-text div h6 {
   font-size: 0.75rem;
   letter-spacing: 6px;
   font-weight: 100;
+}
+
+.section1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background: #eee;
+}
+.section1 .intro-text {
+  margin: 15px;
+  padding: 30px 15px;
+  border: 1px dashed rgb(166, 114, 69);
+}
+.section1 .intro-text h2 {
+  color: rgb(166, 114, 69);
+  font-family: Allura, cursive;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.section1 .intro-text h3 {
+  margin-top: -12px;
+  font-family: Poppins, serif;
+}
+.section1 .intro-text img {
+  margin: 26px;
+}
+.section1 .intro-text img:nth-of-type(2) {
+  height: 70px;
+  border-radius: 150px;
+  margin-bottom: 8px;
+}
+.section1 .intro-text h4 {
+  font-family: Poppins, serif;
+  font-weight: 100;
+}
+.section1 .intro-text h5 {
+  color: rgb(182, 182, 182);
+  font-size: 0.7rem;
+}
+.section1 .intro-pic {
+  background: url(./../assets/img/store-01.jpg) center/cover;
 }/*# sourceMappingURL=Cindex.css.map */
