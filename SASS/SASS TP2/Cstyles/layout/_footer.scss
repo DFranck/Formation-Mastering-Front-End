@@ -38,6 +38,9 @@ footer{
             padding-left: 50px;
             display: grid;
             grid-template-rows: 1fr 1fr;
+            @media screen and (max-width: 680px) {
+            padding-left: 20px;        
+            }
             h3{
                 font-size: .85rem;
             }
@@ -47,17 +50,28 @@ footer{
                 border: 1px solid grey;
                 padding: 7px 13px;
                 width: 250px;
+                @media screen and (max-width: 680px) {
+                    width: 150px;    
+                }
             }
             .follow-us{
                 display: flex;
                 align-items: center;
                 margin-top: 50px;
+                @media screen and (max-width: 680px) {
+                    h3{
+                        display: none
+                    }    
+                }
                 ul{
                     @include set.alignChildren(space-around);
                     flex-wrap: wrap;
                     color: #595956;
                     font-size: .8rem;
                     width: 200px;
+                    @media screen and (max-width: 680px) {
+                        width: 150px;
+                    }
                     i{
                         transition: .2s;
                         cursor: pointer;
