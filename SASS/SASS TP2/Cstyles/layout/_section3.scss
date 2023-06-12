@@ -1,0 +1,98 @@
+@use "../settings" as set;
+
+.section3{
+    padding: 100px 15px 65px;
+    color: set.$white;
+    .form-content{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        background: set.$white;
+        max-width: 1050px;
+        margin: 0 auto;
+        .hours{
+            padding: 24px;
+            background: black;
+            .hours-content{
+                border: 1px dashed set.$grey;
+                padding: 20px 0;
+
+                h3{
+                    font-family: set.$font1;
+                    font-size: 2.5rem;
+                    font-weight: 100;
+                    color: set.$color1;
+                }
+                h4{
+                    font-family: set.$font2;
+                    margin-top: -16px;
+                    letter-spacing: 2px;
+                    font-size: 1.3rem;
+                    text-transform: uppercase;
+                }
+                img{
+                    margin-top: 25px;
+                }
+                h5{
+                    text-transform: uppercase;
+                    color: set.$color1;
+                    font-family: set.$font2;
+                    font-weight: 100;
+                    font-size: 1.1rem;
+                    margin: 38px 0 12px;
+                }
+                p{
+                    font-size: .85rem;
+                }
+            }
+        }
+        .form-infos{
+            @include set.childCenter;
+            padding: 30px 0;
+            h2{
+                font-family: set.$font1;
+                font-size: 2.5rem;
+                font-weight: 100;
+                color: set.$color1;
+            }
+            h3{
+                color: set.$black;
+                margin-top: -18px;
+                font-family: set.$font2;
+                font-size: 1.8rem;
+                text-transform: uppercase;
+            }
+            img{
+                height: 25px;
+                margin: 25px;
+            }
+            .form-inputs{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                margin-bottom: 30px;
+                >*{
+                    padding: 10px 0;
+                    margin: 10px;
+                    background: none;
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid  set.$grey;
+                }
+            }
+            button{
+                border: none;
+                border-radius: 50px;
+                background: set.$black;
+                color: set.$white;
+                padding: 16px 34px;
+                letter-spacing: 4px;
+                font-weight: 700;
+                cursor: pointer;
+                transform: 0.2s;
+                &:hover{
+                    transform: translateX(3px);  
+                    box-shadow: 0px 2px 4px 4px black;
+                }
+            }
+        }
+    }
+}
