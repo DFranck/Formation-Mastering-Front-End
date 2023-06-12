@@ -41,6 +41,11 @@ header nav {
   max-width: 1100px;
   margin: 0 auto;
 }
+@media screen and (max-width: 680px) {
+  header nav {
+    grid-template-columns: 50% 10% 40%;
+  }
+}
 header nav .logo {
   font-family: Allura, cursive;
   font-weight: 100;
@@ -54,6 +59,11 @@ header nav ul {
   text-transform: uppercase;
   font-size: 0.7rem;
   padding: 0 30px;
+}
+@media screen and (max-width: 680px) {
+  header nav ul {
+    visibility: hidden;
+  }
 }
 header nav .nav-icons {
   display: flex;
@@ -91,6 +101,12 @@ header .header-text div h1 {
   margin-top: -28px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 680px) {
+  header .header-text div h1 {
+    font-size: 2rem;
+    margin-top: -15px;
+  }
+}
 header .header-text div img {
   height: 27px;
   margin: 32px 0;
@@ -107,15 +123,30 @@ footer {
   padding: 65px 32px;
   color: #eee;
 }
+@media screen and (max-width: 680px) {
+  footer {
+    background: none;
+  }
+}
 footer .footer-content {
   max-width: 1000px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 50% 50%;
 }
+@media screen and (max-width: 680px) {
+  footer .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
 footer .footer-content .left-part {
   padding-right: 30px;
   line-height: 30px;
+}
+@media screen and (max-width: 680px) {
+  footer .footer-content .left-part {
+    display: none;
+  }
 }
 footer .footer-content .left-part h2 {
   font-family: Allura, cursive;
@@ -170,6 +201,11 @@ footer .footer-content .right-part .follow-us ul i:hover {
   grid-template-columns: 50% 50%;
   background: #eee;
 }
+@media screen and (max-width: 680px) {
+  .section1 {
+    grid-template-columns: 1fr;
+  }
+}
 .section1 .intro-text {
   margin: 15px;
   padding: 30px 15px;
@@ -205,6 +241,11 @@ footer .footer-content .right-part .follow-us ul i:hover {
 .section1 .intro-pic {
   background: url(./../assets/img/store-01.jpg) center/cover;
 }
+@media screen and (max-width: 680px) {
+  .section1 .intro-pic {
+    display: none;
+  }
+}
 
 .section2 {
   position: relative;
@@ -237,6 +278,13 @@ footer .footer-content .right-part .follow-us ul i:hover {
   margin: 30px auto;
   min-width: 500px;
 }
+@media screen and (max-width: 680px) {
+  .section2 ul {
+    min-width: 200px;
+    width: 90%;
+    font-size: 0.65rem;
+  }
+}
 .section2 ul li {
   padding-bottom: 8px;
   border-bottom: 1px solid rgb(182, 182, 182);
@@ -251,6 +299,11 @@ footer .footer-content .right-part .follow-us ul i:hover {
   padding: 15px 0;
   display: grid;
   grid-template-columns: 50% 50%;
+}
+@media screen and (max-width: 680px) {
+  .section2 .meals {
+    grid-template-columns: 1fr;
+  }
 }
 .section2 .meals .meal {
   display: grid;
@@ -298,6 +351,11 @@ footer .footer-content .right-part .follow-us ul i:hover {
   background: #eee;
   max-width: 1050px;
   margin: 0 auto;
+}
+@media screen and (max-width: 850px) {
+  .section3 .form-content {
+    grid-template-columns: 1fr;
+  }
 }
 .section3 .form-content .hours {
   padding: 24px;
@@ -362,6 +420,11 @@ footer .footer-content .right-part .follow-us ul i:hover {
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 680px) {
+  .section3 .form-content .form-infos .form-inputs {
+    grid-template-columns: 1fr;
+  }
+}
 .section3 .form-content .form-infos .form-inputs > * {
   padding: 10px 0;
   margin: 10px;
@@ -388,6 +451,11 @@ footer .footer-content .right-part .follow-us ul i:hover {
 
 .section4 {
   padding: 50px 20px 90px;
+}
+@media screen and (max-width: 680px) {
+  .section4 {
+    display: none;
+  }
 }
 .section4 .event-container {
   max-width: 1000px;

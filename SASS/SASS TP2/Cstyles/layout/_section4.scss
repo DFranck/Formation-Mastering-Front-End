@@ -2,6 +2,9 @@
 
 .section4{
     padding: 50px 20px 90px;
+    @media screen and (max-width: 680px) {
+    display: none;                
+    }
     .event-container{
         max-width: 1000px;
         margin: 0 auto;

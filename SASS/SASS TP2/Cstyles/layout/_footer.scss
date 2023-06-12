@@ -5,14 +5,23 @@ footer{
     text-align: left;
     padding: 65px 32px;
     color: set.$white;
+    @media screen and (max-width: 680px) {
+        background: none;                
+    }
     .footer-content{
         max-width: 1000px;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 50% 50%;
+        @media screen and (max-width: 680px) {
+            grid-template-columns: 1fr;            
+        }
         .left-part{
             padding-right: 30px;
             line-height: 30px;
+            @media screen and (max-width: 680px) {
+                display: none;        
+            }
             h2{
                 font-family: set.$font1;
                 font-size: 2.5rem;
