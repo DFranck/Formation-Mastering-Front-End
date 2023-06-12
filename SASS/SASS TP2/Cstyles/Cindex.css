@@ -319,4 +319,120 @@ header .header-text div h6 {
 .section3 .form-content .form-infos button:hover {
   transform: translateX(3px);
   box-shadow: 0px 2px 4px 4px black;
+}
+
+.section4 {
+  padding: 50px 20px 90px;
+}
+.section4 .event-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.section4 .event-container h2 {
+  font-size: 2.5rem;
+  color: rgb(166, 114, 69);
+  font-family: Allura, cursive;
+  font-weight: 100;
+}
+.section4 .event-container h4 {
+  letter-spacing: 2px;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #eee;
+  text-transform: uppercase;
+  margin-top: -12px;
+  font-family: Poppins, serif;
+}
+.section4 .event-container img {
+  margin: 30px 0;
+}
+.section4 .event-container .event-grid {
+  display: grid;
+  grid-template-columns: 58% 42%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "a c" "b c";
+  gap: 15px;
+}
+.section4 .event-container .event-grid .date-content {
+  background: #21201e;
+  height: 86px;
+  width: 86px;
+  margin: 0 auto;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 22px;
+}
+.section4 .event-container .event-grid .date-content h6 {
+  font-size: 1.7rem;
+}
+.section4 .event-container .event-grid .address {
+  background: #eee;
+}
+.section4 .event-container .event-grid .address h3 {
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding-left: 8px;
+}
+.section4 .event-container .event-grid .address p {
+  font-size: 0.9rem;
+  color: rgb(182, 182, 182);
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+.section4 .event-container .event-grid .address p i {
+  margin-right: 3px;
+  font-size: 0.7rem;
+  transform: translateY(-2px);
+}
+.section4 .event-container .event-grid .address p i:nth-child(2) {
+  margin-left: 10px;
+}
+.section4 .event-container .event-grid .address h5 {
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+.section4 .event-container .event-grid .event-left {
+  display: grid;
+  grid-template-columns: 39% 61%;
+  text-align: left;
+}
+.section4 .event-container .event-grid .event-left .date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section4 .event-container .event-grid .event-left .address {
+  color: #21201e;
+  padding: 30px 20px;
+}
+.section4 .event-container .event-grid .event-1 {
+  grid-area: a;
+}
+.section4 .event-container .event-grid .event-1 .date {
+  background: url(./../assets/img/event-01.jpg) center/cover;
+}
+.section4 .event-container .event-grid .event-2 {
+  grid-area: b;
+}
+.section4 .event-container .event-grid .event-2 .date {
+  background: url(./../assets/img/event-02.jpg) center/cover;
+}
+.section4 .event-container .event-grid .event-3 {
+  grid-area: c;
+  background: url(./../assets/img/event-03.jpg) center/cover;
+  padding: 25px;
+}
+.section4 .event-container .event-grid .event-3 .address {
+  height: 100%;
+  padding: 0 12px;
+}
+.section4 .event-container .event-grid .event-3 .address h3 {
+  margin: 40px 0 15px;
+}
+.section4 .event-container .event-grid .event-3 .address h5 {
+  padding: 45px 0;
 }/*# sourceMappingURL=Cindex.css.map */
