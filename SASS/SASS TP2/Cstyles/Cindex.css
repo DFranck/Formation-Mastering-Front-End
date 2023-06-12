@@ -119,6 +119,7 @@ header .header-text div h6 {
 .section1 .intro-text h3 {
   margin-top: -12px;
   font-family: Poppins, serif;
+  text-transform: uppercase;
 }
 .section1 .intro-text img {
   margin: 26px;
@@ -138,4 +139,86 @@ header .header-text div h6 {
 }
 .section1 .intro-pic {
   background: url(./../assets/img/store-01.jpg) center/cover;
+}
+
+.section2 {
+  position: relative;
+  color: #eee;
+  padding-bottom: 100px;
+}
+.section2::after {
+  content: "";
+  position: absolute;
+  height: 620px;
+  width: 100%;
+  left: 50%;
+  bottom: -330px;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+  background: url(./../assets/img/bg-menu-01.jpg) center/cover;
+}
+.section2 h2 {
+  color: rgb(166, 114, 69);
+  font-size: 2rem;
+  font-family: Allura, cursive;
+  font-weight: 500;
+  padding: 60px 0 30px;
+}
+.section2 ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  margin: 30px auto;
+  min-width: 500px;
+}
+.section2 ul li {
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgb(182, 182, 182);
+}
+.section2 .meals {
+  background: #eee;
+  color: #21201e;
+  width: 85%;
+  margin: 0 auto;
+  max-width: 800px;
+  border-top: 4px solid rgb(166, 114, 69);
+  padding: 15px 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.section2 .meals .meal {
+  display: grid;
+  grid-template-columns: 25% 65% 15%;
+  border-bottom: 1px dashed rgb(182, 182, 182);
+  padding: 30px 0;
+  margin: 0 20px;
+}
+.section2 .meals .meal img {
+  border-radius: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  align-self: center;
+}
+.section2 .meals .meal .meal-text {
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 10px;
+  height: 100%;
+}
+.section2 .meals .meal .meal-text h3 {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.section2 .meals .meal > p {
+  color: rgb(166, 114, 69);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
 }/*# sourceMappingURL=Cindex.css.map */

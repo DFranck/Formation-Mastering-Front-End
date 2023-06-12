@@ -1,0 +1,81 @@
+@use "../settings" as set;
+
+.section2{
+    position: relative;
+    color: set.$white;
+    padding-bottom: 100px;
+
+    &::after{
+        content: "";
+        position: absolute;
+        height: 620px;
+        width: 100%;
+        left: 50%;
+        bottom: -330px;
+        transform: translate(-50%, -50%);
+        z-index: -10;
+        background: url(./../assets/img/bg-menu-01.jpg) center/cover;
+    }
+    h2{
+        color: set.$color1;
+        font-size: 2rem;
+        font-family: set.$font1;
+        font-weight: 500;
+        padding: 60px 0 30px;
+    }
+    ul{
+        @include set.alignChildren(space-around);
+        width: 50%;
+        margin: 30px auto;
+        min-width: 500px;
+        li{
+            padding-bottom: 8px;
+            border-bottom: 1px solid set.$grey;
+        }
+    }
+    .meals{
+        background: set.$white;
+        color: set.$black;
+        width: 85%;
+        margin: 0 auto;
+        max-width: 800px;
+        border-top: 4px solid set.$color1;
+        padding: 15px 0;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        .meal{
+            display: grid;
+            grid-template-columns: 25% 65% 15%;
+            border-bottom: 1px dashed set.$grey;
+            padding: 30px 0;
+            margin: 0 20px;
+            img{
+                border-radius: 50px;
+                object-fit: cover;
+                width: 100%;
+                align-self: center;
+            }
+            .meal-text{
+                text-align: left;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                margin: 0 10px;
+                height: 100%;
+                h3{
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+            }
+            >p{
+                color: set.$color1;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
