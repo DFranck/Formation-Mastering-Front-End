@@ -1,0 +1,36 @@
+@use "../settings" as set;
+
+header{
+    background: url(./../assets/img/bg-slider-06.jpg) center/cover;
+    padding: 0 50px;
+    color: set.$white;
+    height: 100vh;
+
+    nav{
+        height: 12vh;
+        display: grid;
+        grid-template-columns: 10% 82% 8%;
+        align-items: center;
+        max-width: 1100px;
+        margin: 0 auto;
+        .logo{
+            font-family: set.$font1;
+            font-weight: 100;
+            font-size: 2rem;
+            text-align: left;
+        }
+        ul{
+            @include set.alignChildren(space-around);
+            text-transform: uppercase;
+            font-size: .7rem;
+            padding: 0 30px;
+        }
+        .nav-icons{
+            @include set.alignChildren(space-around);
+            font-size:.8rem;
+        }
+        li, i{
+            cursor: pointer;
+        }
+    }
+}
