@@ -39,21 +39,19 @@ nav ul {
 }
 .mouse {
   position: absolute;
-  border: 2px solid red;
-  background-color: rgb(0, 255, 55);
+  background-color: rgb(93, 93, 13);
   border-radius: 300px;
-  width: 2.5vw;
-  height: 2.5vw;
+  width: 15px;
+  height: 15px;
   transform: translate(-50%, -50%);
   z-index: 3;
 }
 .mediumMouse {
   position: absolute;
-  border: 2px solid rgb(0, 255, 8);
-  background: rgba(244, 0, 0, 0.5);
+  background: rgba(194, 194, 194, 0.868);
   border-radius: 300px;
-  width: 10vw;
-  height: 10vw;
+  width: 100px;
+  height: 100px;
   transform: translate(-50%, -50%);
   pointer-events: none;
   mix-blend-mode: multiply;
@@ -62,11 +60,10 @@ nav ul {
 }
 .bigMouse {
   position: absolute;
-  border: 2px solid rgb(0, 255, 76);
-  background: rgba(0, 0, 0, 0.484);
+  background: rgba(0, 0, 0, 0.187);
   border-radius: 300px;
-  width: 15vw;
-  height: 15vw;
+  width: 300px;
+  height: 300px;
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 1;
