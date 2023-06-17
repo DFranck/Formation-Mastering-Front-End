@@ -49,7 +49,9 @@ let data = [
 ];
 // console.log(data[2].pseudo[0]);
 
+//-----------------------------------------------------------
 // Structures de controle*************************************
+//------------------------------------------------------------
 
 if (data[0].age > data[1].age) {
   // console.log(data[0].pseudo + " plus agé que "+ data[1].pseudo);
@@ -98,18 +100,114 @@ for (i = 0; i < data.length; i++) {
 
 // Switch
 document.body.addEventListener("click", (e) => {
-//   console.log(e.target.id);
+  //   console.log(e.target.id);
   switch (e.target.id) {
     case "javascript":
-        document.body.style.background = "yellow";
-        break;
+      document.body.style.background = "yellow";
+      break;
     case "php":
-        document.body.style.background = "purple";
-        break;
+      document.body.style.background = "purple";
+      break;
     case "python":
-        document.body.style.background = "blue";
-        break; 
+      document.body.style.background = "blue";
+      break;
     default:
-        break;
+      break;
   }
 });
+//----------------------------------------------
+// Méthodes String*************************************
+//----------------------------------------------
+let string2 = "Javascript est un langage orienté objet";
+
+// console.log(eval(parseInt("1") + 2));
+// console.log(parseInt("42"), typeof "42");
+// console.log(isNaN("--48"));
+
+// console.log(string2.length);
+// console.log(string2[string2.length-1]);
+
+// console.log(string2.indexOf('langage'));
+// console.log(string2.indexOf('x')); //-1 = ne connais pas
+
+// let newstring = string2.slice(20);
+// let newstring = string2.slice(5, 17);
+// console.log(newstring);
+
+// console.log(string2.split(" "));
+
+// console.log(string2.toLowerCase());
+// console.log(string2.toUpperCase());
+
+// console.log(string2.replace("Javascript", "PHP"));
+
+//----------------------------------------------------------
+// Méthodes Number******************************************
+//----------------------------------------------------------
+
+let number2 = 42.123456;
+let numberString = "42.12 est une chiffre";
+
+// console.log(number2.toFixed("2"));
+// console.log(parseInt("43"));
+// console.log(parseInt(numberString));
+// console.log(parseFloat(numberString));
+
+// Math***********************
+
+// console.log(Math.PI);
+// console.log(Math.round("4.5"));
+// console.log(Math.floor("4.9"));
+// console.log(Math.ceil("4.1"));
+// console.log(Math.pow(2, 7));
+// console.log(Math.sqrt(16));
+
+// console.log(Math.floor(Math.random() * 100));
+
+//----------------------------------------------------------
+// Méthodes Array******************************************
+//---------------------------------------------------------
+
+let array3 = ["Javascript", "PHP", "Python"];
+let array4 = ["Ruby", "Solidity"];
+
+// let newArray = array3.concat(array4);
+// console.log(newArray);
+
+let newArray = [...array3, ...array4];
+// console.log(newArray);
+
+// console.log(array3.join(" / "));
+
+// console.log(array3.slice('1'));
+// console.log(newArray.slice('1',4));
+
+// console.log(array3.indexOf('Python'));
+
+// array3.forEach((langages)=> console.log(langages));
+
+// console.log(array3.every((langage) => langage === "PHP"));
+// console.log(array3.some((langage) => langage === "PHP"));
+
+// let shift = array3.shift()
+// console.log(shift);
+
+// console.log(array3.pop());
+
+// const restArray = array3.splice(1, 1, "C++");
+// //(a partir d'ou,combien,quoi)
+// console.log(restArray);
+
+//=====================================================
+//IMPORTANT//
+//======================================================
+
+let arrayNumber = [4, 74, 28, 12, 1];
+// console.log(arrayNumber.reduce((x, y) => x + y));
+arrayNumber.push(17, "coucou");
+// console.log(arrayNumber);
+
+//FILTER, SORT, MAP(for each en mieux, list des choses)
+
+// console.log(arrayNumber.filter((number)=>number>10));
+console.log(arrayNumber.sort());
