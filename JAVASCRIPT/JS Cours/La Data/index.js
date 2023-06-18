@@ -237,3 +237,105 @@ arrayNumber.push(17, "coucou");
 // `
 //   )
 //   .join("");
+
+//=====================================================
+//DATE//
+//======================================================
+
+//Date Classique
+
+let date = new Date();
+
+//Timestamp
+
+let timestamp = Date.parse(date);
+
+// console.log(timestamp);
+
+//IsoString
+
+// console.log(date.toISOString());
+let isoString = date.toISOString();
+
+function dateParser(chaine) {
+  let newDate = new Date(chaine).toLocaleDateString("fr-FR", {
+    // year: "numeric",
+    // month: "long",
+    // day: "numeric",
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+  });
+  return newDate;
+}
+// console.log(dateParser(date));
+// console.log(dateParser(timestamp));
+// console.log(dateParser(isoString));
+
+//=====================================================
+//Destructuring//
+//======================================================
+
+let moreDate = {
+  destVar: ["Element 1", "Element 2"],
+};
+
+const { destVar } = moreDate;
+// const destVar = moreDate.destvar;
+
+// console.log(moreDate.destVar);
+// console.log(destVar);
+
+let array5 = [70, 80, 90, 100];
+// console.log(array5[0]);
+// console.log(array5[1]);
+// console.log(array5[2]);
+// console.log(array5[3]);
+let [x, y, z, r] = array5;
+// console.log(x, y, z, r);
+
+const dateDest = (chaine) => {
+  let newDate = chaine.split("T")[0];
+  let [y, m, j] = newDate.split("-");
+  return [j, m, y].join("/");
+};
+// console.log(dateDest(isoString));
+
+//=====================================================
+//Les Datasets
+//======================================================
+
+const h3js = document.getElementById("javascript");
+// console.log(h3js.dataset.lang);
+const h3 = document.querySelectorAll("h3");
+
+// h3.forEach((langage) => {
+//   console.log(langage.dataset.lang);
+// });
+
+//=====================================================
+//Les Regex (expression réguliere)
+//======================================================
+
+let mail = "from_scratch33@gmail.com";
+// console.log(mail.search(/from/));
+// console.log(mail.replace(/from/, "2"));
+
+// console.log(mail.match(/SCratch/i));
+// console.log(mail.match(/[fgar]/));
+// console.log(mail.match(/[123 ]/));
+
+// Matcher Tous les chiffres
+// console.log(mail.match(/\d/));
+
+// // Matcher Toutes les lettres
+// console.log(mail.match(/[a-z]/));
+
+// Matcher une adresse email
+// console.log(mail.match(/^[\w_-]+@[\w-]+\.+[a-z]{2,4}$/i));
+
+let separator = 2165435181;
+
+// console.log(separator.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+
+
