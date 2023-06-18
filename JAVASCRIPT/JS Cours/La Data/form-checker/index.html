@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    
-
-
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form action="">
+      <div class="pseudo-container">
+        <label for="pseudo">Pseudo</label>
+        <input type="text" autocomplete="off" id="pseudo" />
+        <span></span>
+      </div>
+      <div class="email-container">
+        <label for="email">Email</label>
+        <input type="text" autocomplete="off" id="email" />
+        <span>Email incorrecte</span>
+      </div>
+      <div class="password-container">
+        <label for="password">Mot de passe</label>
+        <input type="password" autocomplete="off" id="password" />
+        <p id="progress-bar"></p>
+        <span></span>
+      </div>
+      <div class="confirm-container">
+        <label for="confirm">Confirmer mot de passe</label>
+        <input type="password" autocomplete="off" id="confirm" />
+        <span></span>
+      </div>
+      <input type="submit" name="" id="" value="Valider" />
+    </form>
 
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
