@@ -210,4 +210,30 @@ arrayNumber.push(17, "coucou");
 //FILTER, SORT, MAP(for each en mieux, list des choses)
 
 // console.log(arrayNumber.filter((number)=>number>10));
-console.log(arrayNumber.sort());
+// console.log(arrayNumber.sort());
+// console.log(arrayNumber.sort((a, b) => a - b));
+
+// document.body.innerHTML = arrayNumber
+//   .map((number) => `<li> ${number}</li>`)
+//   .join("");
+
+//=====================================================
+//Méthode OBJET//
+//======================================================
+
+// document.body.innerHTML = data
+//   .filter((user) => user.admin === false)
+//   .filter((user) => user.pseudo.includes(""))
+//   .sort((a, b) => a.age - b.age)
+//   .map(
+//     (user) =>
+//       `
+//   <div class="user-card">
+//     <h2>${user.pseudo}</h2>
+//     <h3>${user.technos}</h3>
+//     <h4>Age: ${user.age} ans</h4>
+//     <p>Status : ${user.admin ? "Modérateur" : "Membre"}</p>
+//   </div>
+// `
+//   )
+//   .join("");
