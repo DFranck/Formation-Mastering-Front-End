@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rgb-span {
+  display: flex;
+  background: rgba(0, 0, 0, 0.80);
+  width: 300px;
+  height: 100px;
+  margin: 35vh auto;
+  border-radius: 15px;
+  color: whitesmoke;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
