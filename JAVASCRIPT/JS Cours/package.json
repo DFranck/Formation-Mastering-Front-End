@@ -1,0 +1,12 @@
+{
+  "name": "formation-mastering-front-end",
+  "version": "1.0.0",
+  "description": "Bienvenue dans mon repository pour le parcours complet \"Mastering Front-End\". Ce repository contient tous les projets et exercices que j'ai réalisés dans le cadre de ce parcours de formation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
