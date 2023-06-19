@@ -1,0 +1,22 @@
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 122, 0, 1) 0%,
+    rgba(255, 170, 0, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+form {
+  background: rgb(0, 255, 245);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 255, 245, 1) 0%,
+    rgba(0, 216, 255, 1) 100%
+  );
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px black;
+}
