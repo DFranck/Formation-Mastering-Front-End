@@ -4,6 +4,24 @@
       "pseudo": "POLYMORF",
       "message": "Yo les gens!",
       "id": 1
+    },
+    {
+      "pseudo": "POLYMORF",
+      "message": "COmment ca va!",
+      "id": 3
+    },
+    {
+      "pseudo": "POLYMORF",
+      "message": "COmment ca va!",
+      "id": 4
+    },
+    {
+      "pseudo": "POLYMORF",
+      "message": "COmment ca va!",
+      "id": 5
     }
+  ],
+  "users" :[
+    
   ]
 }
