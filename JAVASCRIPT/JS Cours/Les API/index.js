@@ -87,7 +87,7 @@ setTimeout(() => {
 
 //Promise
 
-fetch("monlien").then((res) => res);
+// fetch("monlien").then((res) => res);
 
 // async/await
 
@@ -102,3 +102,53 @@ const fetchData2 = async () => {
   // await = ne jou pas la suite tant que le await n'est pas terminé
   executeFunction();
 };
+
+//==================================================
+//Le JSON
+//==================================================
+
+//Méthode .json() => méthode qui s'auto-résout en renvoyant le body de la requête.
+
+fetch("data.json")
+  .then((res) => res.json())
+  .then((data) => {
+    // Stryngify => convertit en JSON
+    let settings = JSON.stringify(data);
+    //Parse => transforme json en objet JS
+    // console.log(JSON.parse(settings));
+  });
+//==================================================
+// Web API
+//==================================================
+
+// CLIENT STORAGE
+//---------------
+//Local Storage============
+
+localStorage.data = "je stock la data";
+// document.body.textContent = localStorage.data;
+localStorage.removeItem("data");
+
+const user = {
+  name: "denis",
+  age: "22",
+};
+
+// localStorage.user = user;
+// il faut passer des chaine de caractères
+
+localStorage.user = JSON.stringify(user);
+
+// console.log(JSON.parse(localStorage.user));
+
+// Session Storage==========
+
+// sessionStorage.dataSetting = "55px";
+// sessionStorage.clear();
+
+//Cookies============
+document.cookie = "username= polymorf";
+
+//Bonne Pratique
+
+document.cookie = "Pseudo=PM;path=/; max-age=450000; secure; samesite";
