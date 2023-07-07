@@ -2,25 +2,29 @@
 let dataCountries;
 let dataCountryCard;
 const countries = document.querySelector(".countries-container");
-const rechercherValue = document.getElementById("inputSearch");
+const search = document.getElementById("inputSearch");
+let searchValue = "";
+
+search.addEventListener("input", (e) => {
+  searchValue = e.target.value;
+  // console.log(searchValue);
+});
 
 async function fetcher() {
   const response = await fetch("https://restcountries.com/v3.1/all");
   const data = await response.json();
   dataCountries = data;
 
-  rechercherValue.addEventListener("input", (e) => {
-    console.log(e.target.value);
-  });
-
   dataCountryCard = dataCountries.map((country) => {
-    return {
-      flag: country.flags.svg,
-      flagAlt: country.flags.alt,
-      name: country.name.official,
-      capital: country.capital,
-      population: country.population,
-    };
+    if (country.name.official.includes(searchValue)) {
+      return {
+        flag: country.flags.svg,
+        flagAlt: country.flags.alt,
+        name: country.name.official,
+        capital: country.capital,
+        population: country.population,
+      };
+    }
   });
   // console.log(dataCountryCard);
   dataCountryCard.forEach((country) => {
