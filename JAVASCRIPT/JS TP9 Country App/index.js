@@ -10,10 +10,18 @@ let searchValue = "";
 const minToMax = document.getElementById("minToMax");
 const maxToMin = document.getElementById("maxToMin");
 const alpha = document.getElementById("alpha");
+let country;
 
 minToMax.addEventListener("click", () => {
-  dataCountryCard;
+  console.log("minToMax");
+});
+maxToMin.addEventListener("click", () => {
+  console.log("maxtomin");
+});
+alpha.addEventListener("click", () => {
+  country.sort();
   console.log("alpha");
+  fetcher();
 });
 
 search.addEventListener("input", (e) => {
@@ -45,19 +53,24 @@ async function fetcher() {
         population: country.population,
       };
     });
+  displayCards();
+}
 
+displayCards = () => {
   countries.innerHTML = "";
   dataCountryCard.forEach((country) => {
     countries.innerHTML += `
-    <div class="card">
-    <img src="${country.flag}" alt="${country.flagAlt}">
-    <h2>${country.name}</h2>
-    <h3>${country.capital}</h3>
-    <p>${country.population}</p>
-    </div>
-    `;
+  <div class="card">
+  <img src="${country.flag}" alt="${country.flagAlt}">
+  <h2>${country.name}</h2>
+  <h3>${country.capital}</h3>
+  <p>${country.population}</p>
+  </div>
+  `;
   });
-}
+};
+
+alphaSort;
 
 fetcher();
 // 2 - Créer une fonction pour "fetcher" les données, afficher les données dans la console.
