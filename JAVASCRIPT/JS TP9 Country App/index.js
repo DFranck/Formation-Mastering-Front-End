@@ -3,20 +3,40 @@ let dataCountries;
 let dataCountryCard;
 const countries = document.querySelector(".countries-container");
 const search = document.getElementById("inputSearch");
+const range = document.getElementById("inputRange");
+let rangeValueDisplay = document.getElementById("rangeValue");
+let rangeValue = 24;
 let searchValue = "";
+const minToMax = document.getElementById("minToMax");
+const maxToMin = document.getElementById("maxToMin");
+const alpha = document.getElementById("alpha");
+
+minToMax.addEventListener("click", () => {
+  dataCountryCard;
+  console.log("alpha");
+});
 
 search.addEventListener("input", (e) => {
   searchValue = e.target.value;
-  // console.log(searchValue);
+  fetcher();
+});
+
+range.addEventListener("input", () => {
+  rangeValue = range.value;
+  rangeValueDisplay.innerText = rangeValue;
+  fetcher();
 });
 
 async function fetcher() {
   const response = await fetch("https://restcountries.com/v3.1/all");
   const data = await response.json();
   dataCountries = data;
-
-  dataCountryCard = dataCountries.map((country) => {
-    if (country.name.official.includes(searchValue)) {
+  dataCountryCard = dataCountries
+    .filter((country) =>
+      country.name.official.toUpperCase().includes(searchValue.toUpperCase())
+    )
+    .slice(0, rangeValue)
+    .map((country) => {
       return {
         flag: country.flags.svg,
         flagAlt: country.flags.alt,
@@ -24,9 +44,9 @@ async function fetcher() {
         capital: country.capital,
         population: country.population,
       };
-    }
-  });
-  // console.log(dataCountryCard);
+    });
+
+  countries.innerHTML = "";
   dataCountryCard.forEach((country) => {
     countries.innerHTML += `
     <div class="card">
@@ -40,7 +60,6 @@ async function fetcher() {
 }
 
 fetcher();
-
 // 2 - Créer une fonction pour "fetcher" les données, afficher les données dans la console.
 // 3 - Passer les données à une variable
 
