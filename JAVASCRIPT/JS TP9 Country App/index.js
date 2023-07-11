@@ -13,15 +13,13 @@ const alpha = document.getElementById("alpha");
 let country;
 
 minToMax.addEventListener("click", () => {
-  console.log("minToMax");
+  minToMaxSort();
 });
 maxToMin.addEventListener("click", () => {
-  console.log("maxtomin");
+  maxToMinSort();
 });
 alpha.addEventListener("click", () => {
-  country.sort();
-  console.log("alpha");
-  fetcher();
+  alphaSort();
 });
 
 search.addEventListener("input", (e) => {
@@ -70,7 +68,20 @@ displayCards = () => {
   });
 };
 
-alphaSort;
+alphaSort = () => {
+  dataCountryCard.sort((a, b) => a.name.localeCompare(b.name));
+  displayCards();
+};
+
+minToMaxSort = () => {
+  dataCountryCard.sort((a, b) => a.population - b.population);
+  displayCards();
+};
+
+maxToMinSort = () => {
+  dataCountryCard.sort((a, b) => b.population - a.population);
+  displayCards();
+};
 
 fetcher();
 // 2 - Créer une fonction pour "fetcher" les données, afficher les données dans la console.
