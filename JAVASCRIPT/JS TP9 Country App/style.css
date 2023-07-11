@@ -52,4 +52,5 @@ input[type="range"] {
 .countries-container img {
   width: 50%;
   overflow: hidden;
+  /* object-fit: cover; */
 }
