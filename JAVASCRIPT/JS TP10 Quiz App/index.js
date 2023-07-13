@@ -39,12 +39,11 @@ class Quiz {
     this.currentQuestionIndex = 0;
   }
   getCurrentQuestion() {
-    return this.question[this.currentQuestionIndex];
+    return this.questions[this.currentQuestionIndex];
   }
   guess(answer) {
     if (this.getCurrentQuestion().isCorrectAnnswer(answer)) {
       this.score++;
-      this.currentQuestionIndex++;
     }
     this.currentQuestionIndex++;
   }
@@ -60,16 +59,46 @@ const display = {
     element.innerHTML = text;
   },
   question: function () {
-    this.elementShown("question");
+    this.elementShown("question", quiz.getCurrentQuestion().text);
+  },
+  choices: function () {
+    let choices = quiz.getCurrentQuestion().choices;
+
+    guesshandler = (id, guess) => {
+      document.getElementById(id).onclick = function () {
+        quiz.guess(guess);
+        quizApp();
+      };
+    };
+    // Affichage des choix + la prise en compte du choix de la réponse
+    for (let i = 0; i < choices.length; i++) {
+      this.elementShown("choice" + i, choices[i]);
+      guesshandler("guess" + i, choices[i]);
+    }
+  },
+  progress: function () {
+    this.elementShown(
+      "progress",
+      `Question ${quiz.currentQuestionIndex + 1} sur ${quiz.questions.length}`
+    );
+  },
+  endQuiz: function () {
+    let endQuizHTML = `
+    <h1>Quiz terminé!</h1>
+    <h3>Votre score est de : ${quiz.score} / ${quiz.questions.length}</h3>
+    `;
+    this.elementShown("quiz", endQuizHTML);
   },
 };
 
 //Game Logic
 quizApp = () => {
   if (quiz.hasEnded()) {
-    //ecran de fin
+    display.endQuiz();
   } else {
-    //display question, choice and progress
+    display.question();
+    display.choices();
+    display.progress();
   }
 };
 
