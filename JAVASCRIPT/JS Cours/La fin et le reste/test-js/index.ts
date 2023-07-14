@@ -5,4 +5,4 @@ const sayName = (name?:string)=>{
     
 }
 
-sayName(23)
+sayName()
