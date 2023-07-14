@@ -27,3 +27,58 @@ function draw() {
 window.addEventListener("load", () => {
   draw();
 });
+
+//========================================
+// TRY CATCH
+//========================================
+
+try {
+  //test un block de code
+  maFunction();
+} catch (err) {
+  // console.log(err);
+}
+
+function isValidJSON(txt) {
+  try {
+    JSON.parse(txt);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+// console.log(isValidJSON(51));
+
+//Finally
+try {
+  //test un block de code
+  maFunction();
+} catch (err) {
+  // console.log(err);
+} finally {
+  // console.log("on est arrivé au bout!");
+}
+
+//Throw
+function isNumber(num) {
+  if (isNaN(num)) {
+    throw "not a number";
+  } else {
+    console.log("c'est un nombre");
+  }
+  //plein de code potentiel
+}
+
+try {
+  isNumber("2d");
+} catch (err) {
+  // console.log(err);
+}
+
+//========================================
+// STRICT MODE
+//========================================
+
+// "use strict";
+//TOUT EN HAUT DE PAGE
